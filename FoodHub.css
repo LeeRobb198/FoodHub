@@ -1,6 +1,5 @@
 body{
   margin: auto;
-  /* width: 80%; */
 }
 
 header, section,  nav, footer {
@@ -16,19 +15,20 @@ header, section,  nav, footer {
 }
 
 #title-col{
-  width: 400px;
-  height: 250px;
+  width: 450px;
+  height: 225px;
   background-color: blue;
   display: block;
 }
 #SiteTitle{
   display: block;
   height:100%;
+  margin: auto;
 }
 
 #left-col{
-  width: 400px;
-  height: 300px;
+  width: 450px;
+  height: 800px;
   background-color: red;
   /* margin-top: 5px; */
 }
