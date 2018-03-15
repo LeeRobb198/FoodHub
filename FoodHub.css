@@ -19,18 +19,26 @@ header, section,  nav, footer {
   width: 400px;
   height: 250px;
   background-color: blue;
+<<<<<<< HEAD
   display: block;
 }
 #SiteTitle{
   display: block;
   height:100%;
+=======
+  /*margin-top: auto;*/
+>>>>>>> bd357bf27b3a8b2b3e15db43971d38e1f18305b7
 }
 
 #left-col{
   width: 400px;
   height: 300px;
   background-color: red;
+<<<<<<< HEAD
   /* margin-top: 5px; */
+=======
+ margin-top: 10px;
+>>>>>>> bd357bf27b3a8b2b3e15db43971d38e1f18305b7
 }
 
 #main-content{
