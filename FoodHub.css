@@ -12,19 +12,25 @@ header, section,  nav, footer {
 }
 
 #col{
-  float: left:
+  float: left;
 }
 
 #title-col{
   width: 400px;
-  height: 150px;
+  height: 250px;
   background-color: blue;
+  display: block;
+}
+#SiteTitle{
+  display: block;
+  height:100%;
 }
 
 #left-col{
   width: 400px;
   height: 300px;
   background-color: red;
+  /* margin-top: 5px; */
 }
 
 #main-content{
