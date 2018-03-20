@@ -20,7 +20,7 @@
 
           <div class="ui form" action="SelectMenu" method="get">
             <label for="Location">Location</label>
-            <input type="text" id="Loaction" name="Location" placeholder="Location">
+            <input type="text" id="Location" name="Location" placeholder="Location">
             <label for="lname">Distance</label>
             <input type="text" id="lname" name="lastname" placeholder="Your last name..">
 
@@ -33,21 +33,15 @@
             <input type="checkbox" name="Cuisine" value="American" >American<br>
             <input type="checkbox" name="Cuisine" value="European" >European<br>
             <input type="submit" value="Submit">
-
           </div>
         </div>
-        <!--Placeholder button to toggle reviews. Once map api has been configured this will be removed-->
-        <div class="ui custom button" data-title="Using click events" data-content="">Toggle Reviews</div>
-        </div>
-        <script src="reviewpopup.js"></script>
       </div>
-
       <!-- End of sidebar content ------------------------------------------------------------->
 
       <!-- Start of main content (Map and Reviews) -------------------------------------------->
       <div id="content" class="eleven wide computer eleven wide mobile column" style="background-color:blue">
 
-        <div class="map" style="width: 500px; height: 500px; background-color:yellow">
+        <div class="map">
 
         </div>
 
