@@ -14,6 +14,13 @@ $('#smooth').range({
  });
 });
 
+$('.example .custom.button')
+  .popup({
+    popup : $('.custom.popup'),
+    on    : 'click'
+  })
+;
+
 onChange: function(value) {
   var
     $self = $(this),
