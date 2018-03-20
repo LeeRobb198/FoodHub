@@ -34,12 +34,13 @@ header, section,  nav, footer {
   margin-top: 5px;
 } */
 
-/* #content{
-  display: block;
-} */
+#content{
+  background-color: blue;
+}
 
 #sidebar{
   height: 100%;
+  background-color: green;
 }
 
 .ui.padded.grid{

@@ -1,9 +1,4 @@
-$(document).ready(function() {
-  // Semantic UI popup
-  $('.js_popup')
-    .popup({
-      on : 'click'
-    });
+$(document).ready(function(){
 
 
   // Semantic UI Range
