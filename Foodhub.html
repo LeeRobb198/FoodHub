@@ -5,7 +5,6 @@
     <title>FoodHub</title>
 	<link rel="stylesheet" href="FoodHub.css">
   <link rel="stylesheet" href="semantic/dist/semantic.min.css">
-  <link rel="stylesheet" href="range.css">
   </head>
 
 <!-- Main content of website ----------------------------------------------------------------->
@@ -14,16 +13,15 @@
 
       <!-- Sidebar content ------------------------------------------------------------------->
       <div id="sidebar" class="five wide computer five wide mobile column" style="background-color:green">
-        <div class="ui secondary vertical menu">
-          <a class="active item">
-            <div class="" style="width: 100px; height: 100px; background-color:pink">Logo</div>
-          </a>
-          <div class="ui segment">
+
+        <div class="logo" style="width: 100%; height: 200px; background-color:pink">Logo</div>
+
+        <div class="ui segment">
           <div class="ui form" action="SelectMenu" method="get">
             <label for="Location">Location</label>
             <input type="text" id="Location" name="Location" placeholder="Location">
             <label for="lname">Distance</label>
-           <div class="ui range" id="my-range"></div>
+            <div class="ui range" id="smooth"></div>
 
             <!--For the Cuisine we need to probably need to change these to be more specific-->
 
@@ -44,7 +42,6 @@
             I'm not on the same level as the button, but i can still be found.
           </div>
 
-        </div>
       </div>
       <!-- End of sidebar content ------------------------------------------------------------->
 
@@ -59,15 +56,25 @@
       <!-- End of main content (Map and Reviews) ---------------------------------------------->
 
     </div>
+<<<<<<< HEAD
 
 
     <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
       <script type="text/javascript" src="semantic/dist/semantic.min.js"></script>
     <script type="text/javascript" src="FoodHubFunctionality.js"></script>
       <script type="text/javascript" src="range.js"></script>
+=======
+  <script type="text/javascript" src="semantic/dist/semantic.min.js"></script>
+  <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="FoodHubFunctionality.js"></script>
+>>>>>>> a2e91db59c0ca9b5ef857fb4341b418545004efa
   <!-- Map -->
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDi3cRn3u3eqajJ8-_dpjFoVkg1TSuFwL8&callback=initMap">
   </script>
+<<<<<<< HEAD
   </body>
+=======
+</body>
+>>>>>>> a2e91db59c0ca9b5ef857fb4341b418545004efa
 </html>
