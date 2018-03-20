@@ -7,37 +7,47 @@
   <link rel="stylesheet" href="semantic/dist/semantic.min.css">
   </head>
 
+<!-- Main content of website ----------------------------------------------------------------->
   <body>
     <div class="ui padded grid">
+
+      <!-- Sidebar content ------------------------------------------------------------------->
       <div id="sidebar" class="three wide computer five wide mobile column">
         <div class="ui secondary vertical menu">
-    <a class="active item">
-      <div class="" style="width: 100px; height: 100px; background-color:pink">Logo</div>
-    </a>
-    <div class="ui form" action="SelectMenu" method="get">
-         <label for="Location">Location</label>
-         <input type="text" id="Loaction" name="Location" placeholder="Location">
-         <label for="lname">Distance</label>
-         <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          <a class="active item">
+            <div class="" style="width: 100px; height: 100px; background-color:pink">Logo</div>
+          </a>
+          
+          <div class="ui form" action="SelectMenu" method="get">
+            <label for="Location">Location</label>
+            <input type="text" id="Loaction" name="Location" placeholder="Location">
+            <label for="lname">Distance</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
 
-<!--For the Cuisine we need to probably need to change these to be more specific-->
+            <!--For the Cuisine we need to probably need to change these to be more specific-->
 
-         <label for="Cuisine">Cuisine</label>
-<!--<select id="Cuisine" name="Cuisine">-->
-         <input type="checkbox" name="Cuisine" value="Mexican">Mexican<br>
-         <input type="checkbox" name="Cuisine" value="Asian" >Asian<br>
-         <input type="checkbox" name="Cuisine" value="American" >American<br>
-         <input type="checkbox" name="Cuisine" value="European" >European<br>
-         <input type="submit" value="Submit">
-       </div>
-  </div>
+            <label for="Cuisine">Cuisine</label>
+            <!--<select id="Cuisine" name="Cuisine">-->
+            <input type="checkbox" name="Cuisine" value="Mexican">Mexican<br>
+            <input type="checkbox" name="Cuisine" value="Asian" >Asian<br>
+            <input type="checkbox" name="Cuisine" value="American" >American<br>
+            <input type="checkbox" name="Cuisine" value="European" >European<br>
+            <input type="submit" value="Submit">
+          </div>
+        </div>
       </div>
+      <!-- End of sidebar content ------------------------------------------------------------->
+
+      <!-- Start of main content (Map and Reviews) -------------------------------------------->
       <div id="content" class="thirteen wide computer eleven wide mobile column" style="background-color:blue">
+
         <div class="map" style="width: 500px; height: 500px; background-color:yellow">
 
         </div>
 
       </div>
+      <!-- End of main content (Map and Reviews) ---------------------------------------------->
+
     </div>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="semantic/dist/semantic.min.js"></script>
