@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>FoodHub</title>
+      <link rel="stylesheet" href="range.css">
       <link rel="stylesheet" href="semantic/dist/semantic.min.css">
-	<link rel="stylesheet" href="FoodHub.css">
+	     <link rel="stylesheet" href="FoodHub.css">
 
-  <link rel="stylesheet" href="range.css">
   </head>
 
 <!-- Main content of website ----------------------------------------------------------------->
@@ -32,31 +32,32 @@
             <div class="ui segment">
               <center>  <h1> <u>Filters</u> </h1> </center>
               <h5> cuisine </h5>
-            <select class="ui dropdown">
+                <select class="ui dropdown">
 
-              <option value="0">Mexican cuisine</option>
-              <option value="1">Japanese cuisine</option>
-              <option value="3">American cuisine</option>
-              <option value="4">Chinese cuisine</option>
-              <option value="4">Thai cuisine</option>
-              <option value="5">Greek cuisine</option>
-              <option value="6">Indian cuisine</option>
-              <option value="6">Italian cuisine</option>
-      </select>
-      <div class="ui segment">
-<div class="ui labeled range" id="price-range">
-  <ul class="labels">
+                  <option value="0">Mexican cuisine</option>
+                  <option value="1">Japanese cuisine</option>
+                  <option value="3">American cuisine</option>
+                  <option value="4">Chinese cuisine</option>
+                  <option value="4">Thai cuisine</option>
+                  <option value="5">Greek cuisine</option>
+                  <option value="6">Indian cuisine</option>
+                  <option value="6">Italian cuisine</option>
+                </select>
 
-      <li class="label">Low</li>
-        <li class="label">Medium</li>
-        <li class="label">High</li>
-  </ul>
-</div>
+                <div class="ui segment">
+                  <div class="ui labeled range" id="price-range">
+                    <ul class="labels">
 
-    </div>
+                      <li class="label">Low</li>
+                      <li class="label">Medium</li>
+                      <li class="label">High</li>
+                    </ul>
+                  </div>
+                </div>
 
-          </div>
-        </div>
+              </div>
+            </div>
+
           <div class="some-wrapping-div">
             <div class="ui custom button">Show custom popup</div>
           </div>
@@ -65,26 +66,23 @@
             I'm not on the same level as the button, but i can still be found.
           </div>
 
+        </div>
       </div>
       <!-- End of sidebar content ------------------------------------------------------------->
 
       <!-- Start of main content (Map and Reviews) -------------------------------------------->
-      <div id="content" class="eleven wide computer eleven wide mobile column" style="background-color:blue">
+      <div id="content" class="eleven wide computer eleven wide mobile column">
 
         <div id="map"></div>
 
       </div>
-
-    </div>
       <!-- End of main content (Map and Reviews) ---------------------------------------------->
     </div>
+
     <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="semantic/dist/semantic.min.js"></script>
     <script type="text/javascript" src="range.js"></script>
+    <script type="text/javascript" src="semantic/dist/semantic.min.js"></script>
     <script type="text/javascript" src="FoodHubFunctionality.js"></script>
-  <!-- Map -->
-  <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDi3cRn3u3eqajJ8-_dpjFoVkg1TSuFwL8&callback=initMap">
-  </script>
+
 </body>
 </html>
