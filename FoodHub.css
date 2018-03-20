@@ -51,3 +51,15 @@ header, section,  nav, footer {
   height: 100%;
   background-color: grey;
 }
+
+#header{
+  height: 150px;
+  width: 100%;
+  background-color: purple;
+}
+
+#logo{
+  width: 30%;
+  height: 75%;
+  background-color:pink
+}
