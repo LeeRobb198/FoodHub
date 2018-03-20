@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>FoodHub</title>
+      <link rel="stylesheet" href="semantic/dist/semantic.min.css">
 	<link rel="stylesheet" href="FoodHub.css">
-  <link rel="stylesheet" href="semantic/dist/semantic.min.css">
+
+  <link rel="stylesheet" href="range.css">
   </head>
 
 <!-- Main content of website ----------------------------------------------------------------->
@@ -41,14 +43,15 @@
               <option value="6">Indian cuisine</option>
               <option value="6">Italian cuisine</option>
       </select>
-           <div class="ui labeled range" id="range-0">
-           <ul class="labels">
-           <li class="label">Low</li>
-              <li class="label">Medium</li>
-                <li class="label">High</li>
+      <div class="ui segment">
+<div class="ui labeled range" id="price-range">
+  <ul class="labels">
 
-     </ul>
-  </div>
+      <li class="label">Low</li>
+        <li class="label">Medium</li>
+        <li class="label">High</li>
+  </ul>
+</div>
 
     </div>
 
@@ -75,10 +78,10 @@
     </div>
       <!-- End of main content (Map and Reviews) ---------------------------------------------->
     </div>
-
-  <script type="text/javascript" src="semantic/dist/semantic.min.js"></script>
-  <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
-  <script type="text/javascript" src="FoodHubFunctionality.js"></script>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="semantic/dist/semantic.min.js"></script>
+    <script type="text/javascript" src="range.js"></script>
+    <script type="text/javascript" src="FoodHubFunctionality.js"></script>
   <!-- Map -->
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDi3cRn3u3eqajJ8-_dpjFoVkg1TSuFwL8&callback=initMap">
