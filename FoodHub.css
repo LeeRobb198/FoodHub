@@ -10,6 +10,7 @@ header, section,  nav, footer {
   overflow: hidden;
 }
 
+
 /* #col{
   float: left;
 } */
@@ -62,4 +63,7 @@ header, section,  nav, footer {
   width: 30%;
   height: 75%;
   background-color:pink;
+}
+#price-range{
+  padding-top: 30px;
 }
