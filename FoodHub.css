@@ -36,3 +36,8 @@ header, section,  nav, footer {
 #main-content{
   padding: 25px;
 }
+
+#sidebar{
+  height: 100%;
+  display: block;
+}
