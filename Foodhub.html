@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>FoodHub</title>
+      <link rel="stylesheet" href="range.css">
       <link rel="stylesheet" href="semantic/dist/semantic.min.css">
-	<link rel="stylesheet" href="FoodHub.css">
+	     <link rel="stylesheet" href="FoodHub.css">
 
-  <link rel="stylesheet" href="range.css">
+
   </head>
 
 <!-- Main content of website ----------------------------------------------------------------->
@@ -26,7 +27,7 @@
             <label for="Location">Location</label>
             <input type="text" id="Location" name="Location" placeholder="Location">
             <label for="lname">Distance</label>
-            <div class="ui range" id="smooth"></div>
+            <div class="ui range" id="ebin"></div>
 
             <!--For the Cuisine we need to probably need to change these to be more specific-->
             <div class="ui segment">
@@ -44,14 +45,16 @@
               <option value="6">Italian cuisine</option>
       </select>
       <div class="ui segment">
-<div class="ui labeled range" id="price-range">
-  <ul class="labels">
+        <div class="ui labeled range" id="range-0">
+          <ul class="labels">
 
-      <li class="label">Low</li>
-        <li class="label">Medium</li>
-        <li class="label">High</li>
-  </ul>
-</div>
+              <li class="label"> Low </li>
+                <li class="label">Medium</li>
+                <li class="label">High</li>
+          </ul>
+        </div>
+      </div>
+
 
     </div>
 
@@ -79,8 +82,9 @@
       <!-- End of main content (Map and Reviews) ---------------------------------------------->
     </div>
     <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+      <script type="text/javascript" src="range.js"></script>
     <script type="text/javascript" src="semantic/dist/semantic.min.js"></script>
-    <script type="text/javascript" src="range.js"></script>
+
     <script type="text/javascript" src="FoodHubFunctionality.js"></script>
   <!-- Map -->
   <script async defer
