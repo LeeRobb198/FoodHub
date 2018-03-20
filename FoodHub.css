@@ -41,3 +41,13 @@ header, section,  nav, footer {
   height: 100%;
   display: block;
 }
+
+.ui.padded.grid{
+  height: 100%;
+}
+
+.map{
+  height: 100%;
+  width: 100%;
+  background-color: yellow;
+}
