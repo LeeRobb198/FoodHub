@@ -10,36 +10,35 @@ header, section,  nav, footer {
   overflow: hidden;
 }
 
-#col{
+/* #col{
   float: left;
-}
+} */
 
-#title-col{
+/* #title-col{
   width: 450px;
   height: 225px;
   background-color: blue;
   display: block;
-}
-#SiteTitle{
+} */
+/* #SiteTitle{
   display: block;
   height:100%;
   margin: auto;
-}
+} */
 
-#left-col{
+/* #left-col{
   width: 450px;
   height: 800px;
   background-color: red;
-  /* margin-top: 5px; */
-}
+  margin-top: 5px;
+} */
 
-#main-content{
-  padding: 25px;
-}
+/* #content{
+  display: block;
+} */
 
 #sidebar{
   height: 100%;
-  display: block;
 }
 
 .ui.padded.grid{
@@ -59,7 +58,8 @@ header, section,  nav, footer {
 }
 
 #logo{
+  margin-top: 20px;
   width: 30%;
   height: 75%;
-  background-color:pink
+  background-color:pink;
 }
