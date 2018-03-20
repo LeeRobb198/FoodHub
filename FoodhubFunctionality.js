@@ -1,24 +1,9 @@
-// All the functionality for html template
-$(document).ready(function() {
-  // Semantic UI popup
-  $('.js_popup')
-    .popup({
-      on : 'click'
-    });
+$(document).ready(function(){
 
-$('#smooth').range({
-   min: 0,
-   max: 10,
-   start: 5,
-   smooth: true
- });
-});
-
-onChange: function(value) {
-  var
-    $self = $(this),
-    firstVal = $self.range('get thumb value'),
-    secVal = $self.range('get thumb value', 'second');
-  $('#display-d').html('|' + firstVal + " - " + secVal + '| = ' + value);
-}
-});
+  // Semantic UI Range
+  $('#range-1').range({
+    min: 0,
+    max: 10,
+    start: 5
+  });
+  });
