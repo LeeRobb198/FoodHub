@@ -6,10 +6,7 @@
       <link rel="stylesheet" href="range.css">
       <link rel="stylesheet" href="semantic/dist/semantic.min.css">
 	     <link rel="stylesheet" href="FoodHub.css">
-<<<<<<< HEAD
-=======
 
->>>>>>> a683ed7551a36927214abc36e502d2c4378947d8
 
   </head>
 
@@ -21,7 +18,7 @@
       </div>
 
       <!-- Sidebar content ------------------------------------------------------------------->
-      <div id="sidebar" class="five wide computer five wide mobile column" style="background-color:green">
+      <div id="sidebar" class="five wide computer five wide mobile column">
 
         <!-- <div class="logo" style="width: 100%; height: 200px; background-color:pink">Logo</div> -->
 
@@ -33,91 +30,58 @@
             <div class="ui range" id="ebin"></div>
 
             <!--For the Cuisine we need to probably need to change these to be more specific-->
-            <div class="ui segment">
-              <center>  <h1> <u>Filters</u> </h1> </center>
-              <h5> cuisine </h5>
-<<<<<<< HEAD
-                <select class="ui dropdown">
-
-                  <option value="0">Mexican cuisine</option>
-                  <option value="1">Japanese cuisine</option>
-                  <option value="3">American cuisine</option>
-                  <option value="4">Chinese cuisine</option>
-                  <option value="4">Thai cuisine</option>
-                  <option value="5">Greek cuisine</option>
-                  <option value="6">Indian cuisine</option>
-                  <option value="6">Italian cuisine</option>
-                </select>
+              <div class="ui segment">
+                <center>  <h1> <u>Filters</u> </h1> </center>
+                <h5> cuisine </h5>
+                  <select class="ui dropdown">
+                    <option value="0">Mexican cuisine</option>
+                    <option value="1">Japanese cuisine</option>
+                    <option value="3">American cuisine</option>
+                    <option value="4">Chinese cuisine</option>
+                    <option value="4">Thai cuisine</option>
+                    <option value="5">Greek cuisine</option>
+                    <option value="6">Indian cuisine</option>
+                    <option value="6">Italian cuisine</option>
+                  </select>
 
                 <div class="ui segment">
-                  <div class="ui labeled range" id="price-range">
+                  <div class="ui labeled range" id="range-0">
                     <ul class="labels">
-
-                      <li class="label">Low</li>
+                      <li class="label"> Low </li>
                       <li class="label">Medium</li>
                       <li class="label">High</li>
                     </ul>
                   </div>
                 </div>
 
+                <div class="some-wrapping-div">
+                  <div class="ui custom button">Show custom popup</div>
+                </div>
+
+                <div class="ui custom popup">
+                  I'm not on the same level as the button, but i can still be found.
+                </div>
+
               </div>
             </div>
-=======
-            <select class="ui dropdown">
-
-              <option value="0">Mexican cuisine</option>
-              <option value="1">Japanese cuisine</option>
-              <option value="3">American cuisine</option>
-              <option value="4">Chinese cuisine</option>
-              <option value="4">Thai cuisine</option>
-              <option value="5">Greek cuisine</option>
-              <option value="6">Indian cuisine</option>
-              <option value="6">Italian cuisine</option>
-      </select>
-      <div class="ui segment">
-        <div class="ui labeled range" id="range-0">
-          <ul class="labels">
-
-              <li class="label"> Low </li>
-                <li class="label">Medium</li>
-                <li class="label">High</li>
-          </ul>
-        </div>
-      </div>
-
->>>>>>> a683ed7551a36927214abc36e502d2c4378947d8
-
-          <div class="some-wrapping-div">
-            <div class="ui custom button">Show custom popup</div>
           </div>
-
-          <div class="ui custom popup">
-            I'm not on the same level as the button, but i can still be found.
-          </div>
-
         </div>
-      </div>
       <!-- End of sidebar content ------------------------------------------------------------->
 
       <!-- Start of main content (Map and Reviews) -------------------------------------------->
-      <div id="content" class="eleven wide computer eleven wide mobile column">
+        <div id="content" class="eleven wide computer eleven wide mobile column">
 
-        <div id="map"></div>
+          <div id="map"></div>
 
-      </div>
+        </div>
       <!-- End of main content (Map and Reviews) ---------------------------------------------->
-    </div>
+      </div>
 
     <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
-<<<<<<< HEAD
     <script type="text/javascript" src="range.js"></script>
     <script type="text/javascript" src="semantic/dist/semantic.min.js"></script>
-=======
-      <script type="text/javascript" src="range.js"></script>
-    <script type="text/javascript" src="semantic/dist/semantic.min.js"></script>
 
->>>>>>> a683ed7551a36927214abc36e502d2c4378947d8
     <script type="text/javascript" src="FoodHubFunctionality.js"></script>
 
-</body>
+  </body>
 </html>
