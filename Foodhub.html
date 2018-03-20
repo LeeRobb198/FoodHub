@@ -17,12 +17,12 @@
           <a class="active item">
             <div class="" style="width: 100px; height: 100px; background-color:pink">Logo</div>
           </a>
-
+          <div class="ui segment">
           <div class="ui form" action="SelectMenu" method="get">
             <label for="Location">Location</label>
             <input type="text" id="Location" name="Location" placeholder="Location">
             <label for="lname">Distance</label>
-            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+           <div class="ui range" id="smooth"></div>
 
             <!--For the Cuisine we need to probably need to change these to be more specific-->
 
@@ -34,7 +34,7 @@
             <input type="checkbox" name="Cuisine" value="European" >European<br>
             <input type="submit" value="Submit">
           </div>
-
+        </div>
           <div class="some-wrapping-div">
             <div class="ui custom button">Show custom popup</div>
           </div>
@@ -42,7 +42,7 @@
           <div class="ui custom popup">
             I'm not on the same level as the button, but i can still be found.
           </div>
-          
+
         </div>
       </div>
       <!-- End of sidebar content ------------------------------------------------------------->
@@ -58,7 +58,8 @@
       <!-- End of main content (Map and Reviews) ---------------------------------------------->
 
     </div>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="semantic/dist/semantic.min.js"></script>
+  <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="FoodHubFunctionality.js"></script>
   </body>
 </html>
