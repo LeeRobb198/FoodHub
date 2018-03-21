@@ -18,8 +18,11 @@
       </div>
 
       <!-- Sidebar content ------------------------------------------------------------------->
-      <div id="sidebar" class="five wide computer five wide mobile column">
 
+
+          <div id="sidebar" class="three wide computer column computer only">
+
+        
         <!-- <div class="logo" style="width: 100%; height: 200px; background-color:pink">Logo</div> -->
 
         <div class="ui segment">
@@ -59,8 +62,7 @@
     </div>
   </div>
 </div>
-<h5> Star rating </h5>
-<div class="ui massive star rating" data-max-rating="5"></div>
+
 
     </div>
 </div>
@@ -80,24 +82,49 @@
 
                 <div class="ui segment">
                   <div class="ui labeled range" id="range-0">
-                    <ul class="labels">
-                      <li class="label"> Low </li>
-                      <li class="label">Medium</li>
-                      <li class="label">High</li>
-                    </ul>
+
                   </div>
                 </div>
 
-                <div class="some-wrapping-div">
-                  <div class="ui custom button">Show custom popup</div>
+                <div class="ui form" id="price-range">
+                  <div class="inline fields">
+                    <label>Price range</label>
+                    <div class="field">
+                      <div class="ui radio checkbox">
+                        <input type="radio" name="frequency" checked="checked">
+                        <label>Low</label>
+                      </div>
+                    </div>
+                    <div class="field">
+                      <div class="ui radio checkbox">
+                        <input type="radio" name="frequency">
+                        <label>Medium</label>
+                      </div>
+                    </div>
+                    <div class="field">
+                      <div class="ui radio checkbox">
+                        <input type="radio" name="frequency">
+                        <label>High</label>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                <h5> Star rating </h5>
+                <div class="ui massive star rating" data-max-rating="5"></div>
 
-                <div class="ui custom popup">
-                  I'm not on the same level as the button, but i can still be found.
-                </div>
+
 
               </div>
+
             </div>
+
+          </div>
+          <div class="some-wrapping-div">
+            <div class="ui custom button">Show custom popup</div>
+          </div>
+
+          <div class="ui custom popup">
+            I'm not on the same level as the button, but i can still be found.
           </div>
 
         </div>
@@ -109,6 +136,7 @@
           <div id="map"></div>
 
         </div>
+  </div
       <!-- End of main content (Map and Reviews) ---------------------------------------------->
     </div>
 
