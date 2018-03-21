@@ -62,7 +62,7 @@ header, section,  nav, footer {
 
 #logo{
   margin-top: 15px;
-  width: 30%;
+  width: 18%;
   height: 75%;
   background-color:pink;
 }
@@ -90,4 +90,9 @@ header, section,  nav, footer {
 
 #filterOption{
   padding-top: 20px;
+}
+
+#SiteLogo{
+  height: 100%;
+  width: 100%;
 }
