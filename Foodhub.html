@@ -24,11 +24,15 @@
 
         <div class="ui segment">
           <div class="ui form" action="SelectMenu" method="get">
-            <label for="Location">Location</label>
-            <input type="text" id="Location" name="Location" placeholder="Location">
+            <center><label for="Location" id="locationID">Location</label></center>
+              <div id="filterOption">
+                <label for="Location" id="titleFilterOptions">Your Location</label>
+                <input type="text" id="Location" name="Location" placeholder="Location">
+              </div>
             <label for="lname">Distance</label>
             <div class="ui range" id="ebin"></div>
 
+            <center><div id="separator"></div></center>
             <!--For the Cuisine we need to probably need to change these to be more specific-->
               <div class="ui segment">
                 <center>  <h1> <u>Filters</u> </h1> </center>

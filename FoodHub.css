@@ -70,4 +70,25 @@ header, section,  nav, footer {
   padding-top: 30px;
 }
 
-#Location
+#locationID{
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+#separator{
+  border-radius: 10px;
+  height: 10px;
+  width: 200px;
+  background-color: black;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#titleFilterOptions{
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+#filterOption{
+  padding-top: 20px;
+}
