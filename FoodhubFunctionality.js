@@ -15,5 +15,10 @@ $(document).ready(function(){
     // All your normal JS code goes in here
     $(".rating").rating();
 });
+$('#toggle').click(function(){
+  $('.ui.sidebar').sidebar('toggle');
+
+});
+
 
 });

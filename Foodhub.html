@@ -17,16 +17,23 @@
 
 <!-- Main content of website ----------------------------------------------------------------->
   <body>
-
     <div class="ui padded grid">
-
       <div id="header">
         <div id="logo">
           <img src= "Logo.png" id="SiteLogo"/>
         </div>
       </div>
+      <div class="ui top attached demo menu">
+      <a id="toggle" class="item">
+        <i class="sidebar icon"></i>
+        Menu
+      </a>
+    </div>
+<!-- Sidebar content ------------------------------------------------------------------->
 
-      <!-- Sidebar content ------------------------------------------------------------------->
+      <div class="ui sidebar">
+
+        <div class="ui inverted labeled icon left inline vertical sidebar menu">
       <div id="sidebar" class="three wide computer column computer only">
         <div class="ui segment">
           <div class="ui form" action="SelectMenu" method="get">
@@ -122,8 +129,9 @@
             I'm not on the same level as the button, but i can still be found.
           </div>
         </div>
-      
+
       </div>
+
       <!-- End of sidebar content ------------------------------------------------------------->
 
       <!-- Start of main content (Map and Reviews) -------------------------------------------->
