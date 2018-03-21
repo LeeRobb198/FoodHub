@@ -16,7 +16,4 @@ $(document).ready(function(){
     $(".rating").rating();
 });
 
-$('.ui.sidebar')
-  .sidebar('toggle')
-;
 });
