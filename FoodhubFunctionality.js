@@ -15,4 +15,8 @@ $(document).ready(function(){
     // All your normal JS code goes in here
     $(".rating").rating();
 });
+
+$('.ui.sidebar')
+  .sidebar('toggle')
+;
 });

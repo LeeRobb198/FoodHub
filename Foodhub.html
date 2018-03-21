@@ -7,26 +7,50 @@
       <link rel="stylesheet" href="semantic/dist/semantic.min.css">
 	     <link rel="stylesheet" href="FoodHub.css">
 
+       <!-- Leaflet stylesheet -->
+       <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+       <!-- Leaflet script -->
+       <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+
 
   </head>
 
 <!-- Main content of website ----------------------------------------------------------------->
   <body>
+
     <div class="ui padded grid">
+
       <div id="header">
-        <div id="logo">
-          <img src= "Logo.png" id="SiteLogo"/>
-        </div>
+<<<<<<< HEAD
+
+
+        <div id="logo">Logo</div>
       </div>
 
       <!-- Sidebar content ------------------------------------------------------------------->
 
 
           <div id="sidebar" class="three wide computer column computer only">
+          <div class="ui sidebar inverted vertical menu">
 
 
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 85552bbffd570151c5a08d5281765e78acefa05d
         <!-- <div class="logo" style="width: 100%; height: 200px; background-color:pink">Logo</div> -->
 
+=======
+        <div id="logo">
+          <img src= "Logo.png" id="SiteLogo"/>
+        </div>
+      </div>
+
+      <!-- Sidebar content ------------------------------------------------------------------->
+      <div id="sidebar" class="three wide computer column computer only">
+>>>>>>> d34e8a5a65a0a47b62a1944a2a424bd58efd56c0
         <div class="ui segment">
           <div class="ui form" action="SelectMenu" method="get">
             <center><label for="Location" id="locationID">Location</label></center>
@@ -34,47 +58,43 @@
                 <label for="Location" id="titleFilterOptions">Your Location</label>
                 <input type="text" id="Location" name="Location" placeholder="Location">
               </div>
-            <label for="lname">Distance</label>
-            <div class="ui range" id="ebin"></div>
+              <label for="lname">Distance</label>
+              <div class="ui range" id="ebin"></div>
 
-            <center><div id="separator"></div></center>
+              <center><div id="separator"></div></center>
             <!--For the Cuisine we need to probably need to change these to be more specific-->
 
-            <div class="ui sidebar inverted vertical menu borderless">
+              <div class="ui sidebar inverted vertical menu borderless">
+                <div class="ui segment">
+                  <div class="ui form" id="price-range">
+                    <div class="inline fields">
+                      <label>Price range</label>
+                      <div class="field">
+                        <div class="ui radio checkbox">
+                          <input type="radio" name="frequency" checked="checked">
+                          <label>Low</label>
+                        </div>
+                      </div>
+                      <div class="field">
+                        <div class="ui radio checkbox">
+                          <input type="radio" name="frequency">
+                          <label>Medium</label>
+                        </div>
+                      </div>
+                      <div class="field">
+                        <div class="ui radio checkbox">
+                          <input type="radio" name="frequency">
+                          <label>High</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-            <div class="ui segment">
-
-
-<div class="ui form" id="price-range">
-  <div class="inline fields">
-    <label>Price range</label>
-    <div class="field">
-      <div class="ui radio checkbox">
-        <input type="radio" name="frequency" checked="checked">
-        <label>Low</label>
-      </div>
-    </div>
-    <div class="field">
-      <div class="ui radio checkbox">
-        <input type="radio" name="frequency">
-        <label>Medium</label>
-      </div>
-    </div>
-    <div class="field">
-      <div class="ui radio checkbox">
-        <input type="radio" name="frequency">
-        <label>High</label>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-    </div>
-</div>
               <div class="ui segment">
-                <center>  <h1> <u>Filters</u> </h1> </center>
-                <h5> cuisine </h5>
+                <center><h1>Filters</h1></center>
+                <h5> Cuisine </h5>
                   <select class="ui dropdown">
                     <option value="0">Any cuisine</option>
                     <option value="1">Japanese cuisine</option>
@@ -87,9 +107,7 @@
                   </select>
 
                 <div class="ui segment">
-                  <div class="ui labeled range" id="range-0">
-
-                  </div>
+                  <div class="ui labeled range" id="range-0"></div>
                 </div>
 
                 <div class="ui form" id="price-range">
@@ -115,43 +133,53 @@
                     </div>
                   </div>
                 </div>
+
                 <h5> Star rating </h5>
                 <div class="ui massive star rating" data-max-rating="5"></div>
-
-
-
               </div>
 
-            </div>
-
           </div>
-          <div class="some-wrapping-div">
-            <div class="ui custom button">Show custom popup</div>
-          </div>
+        </div>
 
+<<<<<<< HEAD
           <div class="ui custom popup">
 
             I'm not on the same level as the button, but i can still be found.
           </div>
-
         </div>
+=======
+        <div class="some-wrapping-div">
+          <div class="ui custom button">Show custom popup</div>
+        </div>
+
+        <div class="ui custom popup">
+            I'm not on the same level as the button, but i can still be found.
+>>>>>>> d34e8a5a65a0a47b62a1944a2a424bd58efd56c0
+        </div>
+      </div>
       <!-- End of sidebar content ------------------------------------------------------------->
 
       <!-- Start of main content (Map and Reviews) -------------------------------------------->
-        <div id="content" class="eleven wide computer eleven wide mobile column">
+      <div id="content" class="eleven wide computer eleven wide mobile column">
 
-          <div id="map"></div>
+        <div id="map"></div>
 
+<<<<<<< HEAD
         </div>
-  </div
+  </div>
+</div>
+=======
+      </div>
+>>>>>>> d34e8a5a65a0a47b62a1944a2a424bd58efd56c0
       <!-- End of main content (Map and Reviews) ---------------------------------------------->
+      <div id="footer"></div>
     </div>
 
     <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="range.js"></script>
     <script type="text/javascript" src="semantic/dist/semantic.min.js"></script>
-
     <script type="text/javascript" src="FoodHubFunctionality.js"></script>
+    <script type="text/javascript" src="map.js"></script>
 
   </body>
 </html>
