@@ -36,11 +36,12 @@ header, section,  nav, footer {
 
 #content{
   background-color: blue;
+  height: calc(100vh - 115px);
 }
 
 #sidebar{
-  height: 100%;
-  background-color: green;
+  background-color: #E8E8E8;
+  height: calc(100vh - 115px);
 }
 
 .ui.padded.grid{
@@ -54,13 +55,13 @@ header, section,  nav, footer {
 }
 
 #header{
-  height: 150px;
+  height: 115px;
   width: 100%;
-  background-color: purple;
+  background-color: #E8E8E8;
 }
 
 #logo{
-  margin-top: 20px;
+  margin-top: 15px;
   width: 30%;
   height: 75%;
   background-color:pink;
@@ -68,3 +69,5 @@ header, section,  nav, footer {
 #price-range{
   padding-top: 30px;
 }
+
+#Location
