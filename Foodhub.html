@@ -14,12 +14,17 @@
   <body>
     <div class="ui padded grid">
       <div id="header">
-        <div id="logo">Logo</div>
+        <div id="logo">
+          <img src= "Logo.png" id="SiteLogo"/>
+        </div>
       </div>
 
       <!-- Sidebar content ------------------------------------------------------------------->
-      <div id="sidebar" class="five wide computer five wide mobile column">
 
+
+          <div id="sidebar" class="three wide computer column computer only">
+
+        
         <!-- <div class="logo" style="width: 100%; height: 200px; background-color:pink">Logo</div> -->
 
         <div class="ui segment">
@@ -34,6 +39,39 @@
 
             <center><div id="separator"></div></center>
             <!--For the Cuisine we need to probably need to change these to be more specific-->
+
+            <div class="ui sidebar inverted vertical menu borderless">
+
+            <div class="ui segment">
+
+
+<div class="ui form" id="price-range">
+  <div class="inline fields">
+    <label>Price range</label>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio" name="frequency" checked="checked">
+        <label>Low</label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio" name="frequency">
+        <label>Medium</label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio" name="frequency">
+        <label>High</label>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+</div>
               <div class="ui segment">
                 <center>  <h1> <u>Filters</u> </h1> </center>
                 <h5> cuisine </h5>
@@ -48,31 +86,37 @@
                     <option value="6">Italian cuisine</option>
                   </select>
 
-                  <div class="ui form" id="price-range">
-                    <div class="inline fields">
-                      <label>Price range</label>
-                      <div class="field">
-                        <div class="ui radio checkbox">
-                          <input type="radio" name="frequency" checked="checked">
-                          <label>Low</label>
-                        </div>
+                <div class="ui segment">
+                  <div class="ui labeled range" id="range-0">
+
+                  </div>
+                </div>
+
+                <div class="ui form" id="price-range">
+                  <div class="inline fields">
+                    <label>Price range</label>
+                    <div class="field">
+                      <div class="ui radio checkbox">
+                        <input type="radio" name="frequency" checked="checked">
+                        <label>Low</label>
                       </div>
-                      <div class="field">
-                        <div class="ui radio checkbox">
-                          <input type="radio" name="frequency">
-                          <label>Medium</label>
-                        </div>
+                    </div>
+                    <div class="field">
+                      <div class="ui radio checkbox">
+                        <input type="radio" name="frequency">
+                        <label>Medium</label>
                       </div>
-                      <div class="field">
-                        <div class="ui radio checkbox">
-                          <input type="radio" name="frequency">
-                          <label>High</label>
-                        </div>
+                    </div>
+                    <div class="field">
+                      <div class="ui radio checkbox">
+                        <input type="radio" name="frequency">
+                        <label>High</label>
                       </div>
                     </div>
                   </div>
-                  <h5> Star rating </h5>
-                  <div class="ui massive star rating" data-rating="0"></div>
+                </div>
+                <h5> Star rating </h5>
+                <div class="ui massive star rating" data-max-rating="5"></div>
 
 
 
@@ -98,6 +142,7 @@
           <div id="map"></div>
 
         </div>
+  </div
       <!-- End of main content (Map and Reviews) ---------------------------------------------->
     </div>
 
