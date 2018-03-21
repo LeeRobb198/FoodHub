@@ -63,8 +63,12 @@ header, section,  nav, footer {
   margin-top: 20px;
   width: 30%;
   height: 75%;
-  background-color:pink;
 }
 #price-range{
   padding-top: 30px;
+}
+
+#SiteLogo{
+  height: 100%;
+  width: 100%;
 }
