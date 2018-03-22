@@ -12,6 +12,19 @@ header, section,  nav, footer {
   overflow: hidden;
 }
 
+table{
+    font-family: sans-serif;
+    width: 100%;
+    border: 1px solid black;
+}
+
+th, td{
+  font-family: sans-serif;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {background-color: #f5f5f5;}
 
 /* #col{
   float: left;
@@ -58,10 +71,22 @@ header, section,  nav, footer {
 
 }
 
+#reviews{
+  margin-top: 10px;
+  display: none;
+  position: relative;
+}
+
+#reviewsTable{
+  margin-top: 13px;
+  border: solid;
+}
+
 #header{
   height: 115px;
   width: 100%;
   background-color: #E8E8E8;
+  display: flex;
 }
 
 #logo{
@@ -75,6 +100,7 @@ header, section,  nav, footer {
 }
 
 #SiteLogo{
+  float: left;
   height: 100%;
   width: auto;
 
@@ -86,6 +112,20 @@ header, section,  nav, footer {
   background-color: #E8E8E8;
 }
 
+<<<<<<< HEAD
+=======
+#userIcon{
+  margin-right: 10%;
+  float: right;
+  background-color: yellow;
+  height: 100px;
+  width: auto;
+}
+
+#iconProperties{
+  height: 100px;
+  width: 100px;
+>>>>>>> a08a959090a488053ef2939828f9575f157c6726
 
 @media only screen and (min-width: 1200px){
   #sidebarUI {
