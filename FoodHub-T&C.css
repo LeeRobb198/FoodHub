@@ -1,0 +1,38 @@
+#mobileLogo{
+    margin-top: 15px;
+    width: 25%;
+    height: 75%;
+  }
+
+  #userLoginContent{
+    height: calc(100vh - 115px);
+    width: 100%;
+    background-color: #E8E8E8;
+  }
+ #userinnerContent{
+   margin: 2%;
+   height:calc(100vh - 115px);
+   width: 100%;
+   background-color: white;
+ }
+  #userLoginPanel{
+    border: 10px solid #5cacf0;
+    margin-top: 4%;
+    height: 60%;
+    width: 20%;
+    background-color: #E8E8E8;
+  }
+
+  #userIcon{
+    padding-top: 20px;
+    height:25%;
+    width: 30%;
+  }
+
+  #usernameText{
+    padding-top: 30px;
+  }
+
+  #passwordText{
+    padding-top: 10px;
+  }

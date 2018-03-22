@@ -7,11 +7,41 @@
   #userLoginContent{
     height: calc(100vh - 115px);
     width: 100%;
-    background-color: purple;
+    background-color: #E8E8E8;
+  }
+ #userinnerContent{
+   margin: 2%;
+   height:calc(100vh - 115px);
+   width: 100%;
+   background-color: white;
+ }
+  #userLoginPanel{
+    border: 10px solid #5cacf0;
+    margin-top: 4%;
+    height: 60%;
+    width: 350px;
+    background-color: #E8E8E8;
   }
 
-  #userLoginPanel{
-    height: 50%;
-    width: 20%;
-    background-color: blue;
+  #userIcon{
+    padding-top: 20px;
+    height:25%;
+    width: 30%;
+  }
+
+  #usernameText{
+    padding-top: 5%;
+  }
+
+  #passwordText{
+    padding-top: 2%;
+  }
+
+  #submitButton{
+    background-color: white;
+  }
+
+  #buttonPosition{
+    padding-top: 10%;
+    padding-bottom: 6%;
   }
