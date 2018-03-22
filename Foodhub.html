@@ -16,7 +16,15 @@
   </head>
 
   <body>
-    <div class="ui sidebar">
+    <div class="ui top attached demo menu three wide column tablet only">
+      <a class="item">
+        <i class="sidebar icon"></i>
+        Menu
+      </a>
+</div>
+
+
+    <div class="ui sidebar three wide computer column computer only">
       <div class="ui form" action="SelectMenu" method="get">
         <center><label for="Location" id="locationID">Location</label></center>
           <div id="filterOption">
@@ -109,12 +117,8 @@
           <img src= "Logo.png" id="SiteLogo"/>
         </div>
       </div>
-      <div class="ui top attached demo menu three wide mobile column tablet only">
-      <a id="toggle" class="item">
-        <i class="content icon"></i>
-        Menu
-      </a>
-    </div>
+
+
 <div id="sidebar" class="three wide computer column computer only">
         <div class="ui segment">
           <div class="ui form" action="SelectMenu" method="get">
@@ -207,13 +211,8 @@
           </div>
         </div>
 
-        <div class="some-wrapping-div">
-          <div class="ui custom button">Show custom popup</div>
-        </div>
-
-        <div class="ui custom popup">
-            I'm not on the same level as the button, but i can still be found.
-        </div>
+        <!-- Button used to show reviews for now as api has not been fully implemented -->
+        <div class="ui teal button" data-title="Using click events" data-content="This will show the reviews for searched restaurants">Show Reviews</div>
 
       </div>
 

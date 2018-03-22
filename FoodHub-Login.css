@@ -1,0 +1,17 @@
+#mobileLogo{
+    margin-top: 15px;
+    width: 25%;
+    height: 75%;
+  }
+
+  #userLoginContent{
+    height: calc(100vh - 115px);
+    width: 100%;
+    background-color: purple;
+  }
+
+  #userLoginPanel{
+    height: 50%;
+    width: 20%;
+    background-color: blue;
+  }
