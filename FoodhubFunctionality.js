@@ -13,6 +13,6 @@ $(document).ready(function(){
 
       
       $('#showReviews').click(function(){
-          $('#reviews').css({"display": "block", "background-color": "yellow"});
+          $('#reviews').css({"display": "inline"});
       });
 });
