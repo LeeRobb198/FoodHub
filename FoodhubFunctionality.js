@@ -7,8 +7,7 @@ $(document).ready(function(){
   });
     // All your normal JS code goes in here
     $(".rating").rating();
-$('body .ui.sidebar').sidebar('setting', 'transitions','overlay')
-  .sidebar('attach events', '.toggle.button')
-  .sidebar('toggle');
 
+    $('.sidebar')
+      .sidebar('attach events', '.item');
 });
