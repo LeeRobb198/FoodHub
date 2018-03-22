@@ -11,4 +11,8 @@ $('body .ui.sidebar').sidebar('setting', 'transitions','overlay')
   .sidebar('attach events', '.toggle.button')
   .sidebar('toggle');
 
+  $('.teal.button')
+    .popup({
+      on: 'click'
+    });
 });
