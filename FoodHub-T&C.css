@@ -1,5 +1,5 @@
 #mobileLogo{
-  
+
     margin-top: 15px;
     width: 25%;
     height: 75%;
@@ -13,4 +13,8 @@
    height:calc(100vh - 115px);
    width: 100%;
    background-color: white;
+ }
+
+ body {
+background-color:   #E8E8E8;
  }
