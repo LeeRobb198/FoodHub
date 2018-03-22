@@ -1,5 +1,6 @@
 body{
   margin: auto;
+  padding: 1em;
 
 }
 
@@ -76,6 +77,7 @@ header, section,  nav, footer {
 #SiteLogo{
   height: 100%;
   width: auto;
+
 }
 
 #footer{
@@ -84,8 +86,10 @@ header, section,  nav, footer {
   background-color: #E8E8E8;
 }
 
+
 @media only screen and (min-width: 1200px){
   #sidebarUI {
     display: none;
+
   }
 }
