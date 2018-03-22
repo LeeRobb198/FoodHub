@@ -11,6 +11,19 @@ header, section,  nav, footer {
   overflow: hidden;
 }
 
+table{
+    font-family: sans-serif;
+    width: 100%;
+    border: 1px solid black;
+}
+
+th, td{
+  font-family: sans-serif;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {background-color: #f5f5f5;}
 
 /* #col{
   float: left;
@@ -55,6 +68,17 @@ header, section,  nav, footer {
   height: 100%;
   background-color: grey;
 
+}
+
+#reviews{
+  margin-top: 10px;
+  display: none;
+  position: relative;
+}
+
+#reviewsTable{
+  margin-top: 13px;
+  border: solid;
 }
 
 #header{
