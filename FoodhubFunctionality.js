@@ -9,5 +9,10 @@ $(document).ready(function(){
     $(".rating").rating();
 
     $('.sidebar')
-      .sidebar('attach events', '.item')
+      .sidebar('attach events', '.item');
+
+      
+      $('#showReviews').click(function(){
+          $('#reviews').css({"display": "block", "background-color": "yellow"});
+      });
 });
