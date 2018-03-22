@@ -10,9 +10,9 @@ $(document).ready(function(){
 
     $('.sidebar')
       .sidebar('attach events', '.item');
+
       
-      $('.teal.button')
-        .popup({
-          on: 'click'
-        });
+      $('#showReviews').click(function(){
+          $('#reviews').css({"display": "block", "background-color": "yellow"});
+      });
 });
