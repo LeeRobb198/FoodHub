@@ -86,6 +86,7 @@ header, section,  nav, footer {
   background-color: #E8E8E8;
 }
 
+<<<<<<< HEAD
 #userIcon{
   margin-right: 10%;
   float: right;
@@ -97,4 +98,10 @@ header, section,  nav, footer {
 #iconProperties{
   height: 100px;
   width: 100px;
+=======
+@media only screen and (min-width: 1200px){
+  #sidebarUI {
+    display: none;
+  }
+>>>>>>> 13c36348c115a11465c3349085e73cce79b86bed
 }
