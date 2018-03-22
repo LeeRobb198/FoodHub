@@ -9,5 +9,5 @@ $(document).ready(function(){
     $(".rating").rating();
 
     $('.sidebar')
-      .sidebar('attach events', '.item');
+      .sidebar('attach events', '.item')
 });

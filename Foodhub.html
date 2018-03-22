@@ -16,15 +16,19 @@
   </head>
 
   <body>
-    <div class="ui top attached demo menu three wide column tablet only">
-      <a class="item">
+
+
+    <div class="ui top fixed menu five tablet column tablet only">
+        <a class="item">
         <i class="sidebar icon"></i>
-        Menu
-      </a>
-</div>
+          Menu
+        </a>
+    </div>
 
 
-    <div class="ui sidebar three wide computer column computer only">
+
+    <div id="sidebar" class="ui sidebar  six computer column tablet only">
+      <div class="ui segment">
       <div class="ui form" action="SelectMenu" method="get">
         <center><label for="Location" id="locationID">Location</label></center>
           <div id="filterOption">
@@ -110,6 +114,8 @@
           </div>
       </div>
     </div>
+    </div>
+
     <div class="pusher">
     <div class="ui padded grid">
       <div id="header">
@@ -209,6 +215,7 @@
 
           </div>
         </div>
+
 
         <div class="some-wrapping-div">
           <div class="ui custom button">Show custom popup</div>
