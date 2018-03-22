@@ -9,12 +9,14 @@
     width: 100%;
     background-color: #E8E8E8;
   }
+
  #userinnerContent{
    margin: 2%;
    height:calc(100vh - 115px);
    width: 100%;
    background-color: white;
  }
+
   #userLoginPanel{
     border: 10px solid #5cacf0;
     margin-top: 4%;
