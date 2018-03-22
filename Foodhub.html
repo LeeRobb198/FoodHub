@@ -15,30 +15,108 @@
 
   </head>
 
-<!-- Main content of website ----------------------------------------------------------------->
   <body>
+    <div class="ui sidebar">
+      <div class="ui form" action="SelectMenu" method="get">
+        <center><label for="Location" id="locationID">Location</label></center>
+          <div id="filterOption">
+            <label for="Location" id="titleFilterOptions">Your Location</label>
+            <input type="text" id="Location" name="Location" placeholder="Location">
+          </div>
+          <label for="lname">Distance</label>
+          <div class="ui range" id="ebin"></div>
+
+          <center><div id="separator"></div></center>
+        <!--For the Cuisine we need to probably need to change these to be more specific-->
+
+
+            <div class="ui segment">
+              <div class="ui form" id="price-range">
+                <div class="inline fields">
+                  <label>Price range</label>
+                  <div class="field">
+                    <div class="ui radio checkbox">
+                      <input type="radio" name="frequency" checked="checked">
+                      <label>Low</label>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <div class="ui radio checkbox">
+                      <input type="radio" name="frequency">
+                      <label>Medium</label>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <div class="ui radio checkbox">
+                      <input type="radio" name="frequency">
+                      <label>High</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          <div class="ui segment">
+            <center><h1>Filters</h1></center>
+            <h5> Cuisine </h5>
+              <select class="ui dropdown">
+                <option value="0">Mexican cuisine</option>
+                <option value="1">Japanese cuisine</option>
+                <option value="3">American cuisine</option>
+                <option value="4">Chinese cuisine</option>
+                <option value="4">Thai cuisine</option>
+                <option value="5">Greek cuisine</option>
+                <option value="6">Indian cuisine</option>
+                <option value="6">Italian cuisine</option>
+              </select>
+
+            <div class="ui segment">
+              <div class="ui labeled range" id="range-0"></div>
+            </div>
+
+            <div class="ui form" id="price-range">
+              <div class="inline fields">
+                <label>Price range</label>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="frequency" checked="checked">
+                    <label>Low</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="frequency">
+                    <label>Medium</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="frequency">
+                    <label>High</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h5> Star rating </h5>
+            <div class="ui massive star rating" data-max-rating="5"></div>
+          </div>
+      </div>
+    </div>
+    <div class="pusher">
     <div class="ui padded grid">
       <div id="header">
         <div id="logo">
           <img src= "Logo.png" id="SiteLogo"/>
         </div>
       </div>
-  <!--    <div class="ui top attached demo menu">
+      <div class="ui top attached demo menu three wide mobile column tablet only">
       <a id="toggle" class="item">
-        <i class="sidebar icon"></i>
+        <i class="content icon"></i>
         Menu
       </a>
-    </div> -->
-<!-- Sidebar content ------------------------------------------------------------------->
-
-
-
-      <!--  <div class="ui inverted labeled icon left inline vertical sidebar menu"> -->
-      <div id="sidebar" class="three wide computer column computer only">
+    </div>
+<div id="sidebar" class="three wide computer column computer only">
         <div class="ui segment">
-
-
-
           <div class="ui form" action="SelectMenu" method="get">
             <center><label for="Location" id="locationID">Location</label></center>
               <div id="filterOption">
@@ -51,7 +129,7 @@
               <center><div id="separator"></div></center>
             <!--For the Cuisine we need to probably need to change these to be more specific-->
 
-              <div class="ui sidebar inverted vertical menu borderless">
+
                 <div class="ui segment">
                   <div class="ui form" id="price-range">
                     <div class="inline fields">
@@ -77,7 +155,7 @@
                     </div>
                   </div>
                 </div>
-              </div>
+
 
               <div class="ui segment">
                 <center><h1>Filters</h1></center>
@@ -137,19 +215,24 @@
         </div>
 
       </div>
-    </div>
+
 
       <!-- End of sidebar content ------------------------------------------------------------->
 
-      <!-- Start of main content (Map and Reviews) -------------------------------------------->
-      <div id="content" class="thirteen wide computer eleven wide mobile column">
+
+        <!-- Start of main content (Map and Reviews) -------------------------------------------->
+
+      <div id="content" class="thirteen wide computer sixteen wide mobile column">
 
         <div id="map"></div>
 
+
         </div>
+      </div>
       <!-- End of main content (Map and Reviews) ---------------------------------------------->
       <div id="footer"></div>
-    </div>
+        </div>
+
 
 
     <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
