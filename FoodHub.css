@@ -1,5 +1,6 @@
 body{
   margin: auto;
+  padding: 1em;
 
 }
 
@@ -102,6 +103,7 @@ tr:hover {background-color: #f5f5f5;}
   float: left;
   height: 100%;
   width: auto;
+
 }
 
 #footer{
@@ -125,5 +127,6 @@ tr:hover {background-color: #f5f5f5;}
 @media only screen and (min-width: 1200px){
   #sidebarUI {
     display: none;
+
   }
 }
