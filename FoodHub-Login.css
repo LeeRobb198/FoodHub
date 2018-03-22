@@ -7,7 +7,11 @@
   #userLoginContent{
     height: calc(100vh - 115px);
     width: 100%;
+<<<<<<< HEAD
     background-color: #5cacf0;
+=======
+    background-color: #E8E8E8;
+>>>>>>> 252fdff2bd6be328007f8b7630a276caf0ce9c82
   }
  #userinnerContent{
    margin: 2%;
@@ -16,7 +20,23 @@
    background-color: white;
  }
   #userLoginPanel{
-    height: 50%;
+    border: 10px solid #5cacf0;
+    margin-top: 4%;
+    height: 60%;
     width: 20%;
-    background-color: blue;
+    background-color: #E8E8E8;
+  }
+
+  #userIcon{
+    padding-top: 20px;
+    height:25%;
+    width: 30%;
+  }
+
+  #usernameText{
+    padding-top: 30px;
+  }
+
+  #passwordText{
+    padding-top: 10px;
   }
