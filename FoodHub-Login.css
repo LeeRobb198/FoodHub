@@ -7,9 +7,14 @@
   #userLoginContent{
     height: calc(100vh - 115px);
     width: 100%;
-    background-color: purple;
+    background-color: #5cacf0;
   }
-
+ #userinnerContent{
+   margin: 2%;
+   height:calc(100vh - 115px);
+   width: 100%;
+   background-color: white;
+ }
   #userLoginPanel{
     height: 50%;
     width: 20%;
