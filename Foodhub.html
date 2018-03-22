@@ -16,7 +16,15 @@
   </head>
 
   <body>
-    <div class="ui sidebar">
+    <div class="ui top attached demo menu three wide column tablet only">
+      <a class="item">
+        <i class="sidebar icon"></i>
+        Menu
+      </a>
+</div>
+
+
+    <div class="ui sidebar three wide computer column computer only">
       <div class="ui form" action="SelectMenu" method="get">
         <center><label for="Location" id="locationID">Location</label></center>
           <div id="filterOption">
@@ -109,12 +117,8 @@
           <img src= "Logo.png" id="SiteLogo"/>
         </div>
       </div>
-      <div class="ui top attached demo menu three wide mobile column tablet only">
-      <a id="toggle" class="item">
-        <i class="content icon"></i>
-        Menu
-      </a>
-    </div>
+
+
 <div id="sidebar" class="three wide computer column computer only">
         <div class="ui segment">
           <div class="ui form" action="SelectMenu" method="get">
@@ -229,7 +233,7 @@
         </div>
 
 
-
+    <script src="js/konami.js"></script>
     <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="range.js"></script>
     <script type="text/javascript" src="semantic/dist/semantic.min.js"></script>
