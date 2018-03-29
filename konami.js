@@ -39,8 +39,11 @@ document.addEventListener('keydown', function(e) {
 
 function activateCheats() {
 
-  var audio = new Audio('Epic.mp3');
+  var audio = new Audio('Music.mp3');
   audio.play();
 
-  alert("cheats activated - Music By Bensound");
+  $('#iconProperties').src = "MAN.jpg";
+
+  alert("cheats activated - Music By The man mith legand");
+
 }
