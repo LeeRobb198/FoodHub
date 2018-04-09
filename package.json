@@ -1,0 +1,26 @@
+{
+  "name": "foodhub",
+  "version": "1.0.0",
+  "description": "Repository for FoodHub Web Application",
+  "main": "FoodHub.js",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mongodb": "^2.2.33",
+    "node": "^9.11.0",
+    "semantic-ui": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeeRobb198/FoodHub.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeeRobb198/FoodHub/issues"
+  },
+  "homepage": "https://github.com/LeeRobb198/FoodHub#readme"
+}
