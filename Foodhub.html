@@ -8,15 +8,16 @@
 	     <link rel="stylesheet" href="FoodHub.css">
 
        <!-- Leaflet stylesheet -->
-       <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+       <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" /> -->
        <!-- Leaflet script -->
-       <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+       <!-- <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script> -->
 
+       <!-- Script for AutoComplete -->
+       <script script type="text/javascript" src="AutoComplete.js"></script>
 
   </head>
 
   <body>
-
 
     <div id=sidebarUI class="ui fixed borderless secondary  menu">
         <a class="active item">
@@ -30,10 +31,10 @@
     <div id="sidebar" class="ui sidebar top mobile only">
       <div class="ui segment">
       <div class="ui form" action="SelectMenu" method="get">
-        <center><label for="Location" id="locationID">Location</label></center>
+        <center><h1>Location</h1></center>
           <div id="filterOption">
             <label for="Location" id="titleFilterOptions">Your Location</label>
-            <input type="text" id="Location" name="Location" placeholder="Location">
+            <input type="text" id="mobileLocation" name="Location" placeholder="Location">
           </div>
           <label for="lname">Distance</label>
           <div class="ui segment">
@@ -48,22 +49,22 @@
 
           <div class="ui segment">
             <center><h1>Filters</h1></center>
-            <h5> Cuisine </h5>
+            <h5>Cuisine</h5>
               <select class="ui dropdown">
-                <option value="0">Any </option>
-                <option value="1">Japanese </option>
-                <option value="3">American </option>
-                <option value="4">Chinese </option>
-                <option value="4">Thai </option>
-                <option value="5">Greek </option>
-                <option value="6">Indian </option>
-                <option value="6">Italian </option>
-                <option value="7">Mexican </option>
+                <option value="0">Any</option>
+                <option value="1">Japanese</option>
+                <option value="3">American</option>
+                <option value="4">Chinese</option>
+                <option value="4">Thai</option>
+                <option value="5">Greek</option>
+                <option value="6">Indian</option>
+                <option value="6">Italian</option>
+                <option value="7">Mexican</option>
               </select>
 
             <div class="ui form" id="price-range">
+              <h5>Price Range</h5>
               <div class="inline fields">
-                <label>Price range</label>
                 <div class="field">
                   <div class="ui radio checkbox">
                     <input type="radio" name="frequency" checked="checked">
@@ -84,7 +85,7 @@
                 </div>
               </div>
             </div>
-            <h5> Star rating </h5>
+            <h5>Star Rating</h5>
             <div class="ui massive star rating" data-max-rating="5"></div>
             <div id="submitButton">
             <button class="ui green button">Submit</button>
@@ -104,57 +105,49 @@
             <img src= "Logo.png" id="SiteLogo"/>
         </div>
         <!-- User Icon -->
-      <div class="right floated left aligned six wide column">
-
-        <div id="userIcon">
+        <div class="right floated left aligned six wide column">
           <a href="FoodHub-Login.html">
             <img src= "user-icon.png" id="iconProperties"/>
           </a>
         </div>
-
-      </div>
       </div>
 
       <!-- End of header content ------------------------------------------------------------->
 
-<div id="sidebar" class="three wide computer column computer only">
+      <div id="sidebar" class="four wide computer column computer only">
         <div class="ui segment">
           <div class="ui form" action="SelectMenu" method="get">
-            <center><label for="Location" id="locationID">Location</label></center>
+            <center><h1>Location</h1></center>
               <div id="filterOption">
                 <label for="Location" id="titleFilterOptions">Your Location</label>
-                <input type="text" id="Location" name="Location" placeholder="Location">
+                <input type="text" id="mainLocation" name="Location" placeholder="Location">
               </div>
+
               <label for="lname">Distance</label>
               <div class="ui segment">
                 <div class="ui labeled range" id="range-0"></div>
               </div>
 
               <center><div id="separator"></div></center>
-            <!--For the Cuisine we need to probably need to change these to be more specific-->
-
-
-
-
 
               <div class="ui segment">
                 <center><h1>Filters</h1></center>
-                <h5> Cuisine </h5>
+                <h5>Cuisine</h5>
                   <select class="ui dropdown">
                     <option value="0">Any</option>
-                    <option value="1">Japanese </option>
-                    <option value="3">American </option>
-                    <option value="4">Chinese </option>
-                    <option value="4">Thai </option>
-                    <option value="5">Greek </option>
+                    <option value="1">Japanese</option>
+                    <option value="3">American</option>
+                    <option value="4">Chinese</option>
+                    <option value="4">Thai</option>
+                    <option value="5">Greek</option>
                     <option value="6">Indian</option>
                     <option value="6">Italian</option>
                     <option value="7">Mexican</option>
                   </select>
 
                 <div class="ui form" id="price-range">
+                  <h5>Price Range</h5>
                   <div class="inline fields">
-                    <label>Price range</label>
                     <div class="field">
                       <div class="ui radio checkbox">
                         <input type="radio" name="frequency" checked="checked">
@@ -196,7 +189,7 @@
 
         <!-- Start of main content (Map and Reviews) -------------------------------------------->
 
-      <div id="content" class="thirteen wide computer sixteen wide mobile column">
+      <div id="content" class="twelve wide computer sixteen wide mobile column">
 
         <div id="map">
 
@@ -236,7 +229,36 @@
     <script type="text/javascript" src="range.js"></script>
     <script type="text/javascript" src="semantic/dist/semantic.min.js"></script>
     <script type="text/javascript" src="http://helium-brave.8080.codio.io/Coursework/FoodhubFunctionality.js"></script>
-    <script type="text/javascript" src="map.js"></script>
+
+    <!-- Script for leaflet map js -->
+    <!-- <script type="text/javascript" src="map.js"></script> -->
+
+    <!-- Script for Google AutoComplete and Map issue with separate scripts for api so combined however not doing the autocomplete -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKmr5cGY2-bu4wHPpMSxsvrpH5XM6-Cps&libraries=places&callback=initAutocomplete&callback=myMap" async defer></script>
+
+    <!-- Script for Google Map -->
+    <script>
+    function myMap() {
+      var mapCanvas = document.getElementById("map");
+      var myCenter = new google.maps.LatLng(57.1497,-2.099075	);
+      var mapOptions = {center: myCenter, zoom: 5};
+      var map = new google.maps.Map(mapCanvas,mapOptions);
+      var marker = new google.maps.Marker({
+        position: myCenter,
+        animation:google.maps.Animation.BOUNCE
+      });
+      marker.setMap(map);
+
+      // Zoom to 15 when clicking on marker
+      google.maps.event.addListener(marker,'click',function() {
+        map.setZoom(15);
+        map.setCenter(marker.getPosition());
+      });
+    }
+    </script>
+
+    <!-- Script for Google Map API -->
+    <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKmr5cGY2-bu4wHPpMSxsvrpH5XM6-Cps&callback=myMap"></script> -->
 
   </body>
 </html>
