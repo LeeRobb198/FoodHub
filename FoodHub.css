@@ -1,5 +1,6 @@
 body{
   margin: auto;
+  padding: 1em;
 
 }
 
@@ -91,6 +92,7 @@ tr:hover {background-color: #f5f5f5;}
 #logo{
   padding-left: 15px;
   margin-top: 15px;
+  margin-left: 50px;
   width: 25%;
   height: 75%;
 }
@@ -103,6 +105,7 @@ tr:hover {background-color: #f5f5f5;}
   float: left;
   height: 100%;
   width: auto;
+
 }
 
 #reviews{
@@ -123,19 +126,32 @@ tr:hover {background-color: #f5f5f5;}
 }
 
 #userIcon{
-  margin-right: 10%;
-  float: right;
-  background-color: yellow;
-  height: 100px;
-  width: auto;
+
+
+
+
+
 }
 
 #iconProperties{
   height: 100px;
   width: 100px;
+}
 
 @media only screen and (min-width: 1200px){
   #sidebarUI {
     display: none;
+
   }
+}
+#sidebarUI{
+padding-top: 3%;
+}
+
+#terms{
+  position: absolute;
+    bottom: 8px;
+    left: 16px;
+    font-size: 18px;
+
 }
