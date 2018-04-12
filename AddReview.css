@@ -1,0 +1,56 @@
+body{
+  margin: auto;
+
+}
+
+.ui.padded.grid{
+  height: 100%;
+}
+
+#header{
+  height: 115px;
+  width: 100%;
+  background-color: #E8E8E8;
+  display: flex;
+}
+
+#logo{
+  margin-left: 50px;
+  margin-top: 15px;
+  width: 25%;
+  height: 100%;
+}
+
+#SiteLogo{
+  float: left;
+  width: 25%;
+  height: 75%;
+  width: auto;
+  margin-right: 100%;
+}
+
+#userIcon{
+  padding-left: 60%;
+  height: 100px;
+  width: auto;
+}
+
+#iconProperties{
+  height: 100px;
+  width: 100px;
+}
+
+#addSection{
+  position:fixed;
+     top: 30%;
+     left: 50%;
+     width:30em;
+     margin-top: -9em; /*set to a negative number 1/2 of your height*/
+     margin-left: -15em; /*set to a negative number 1/2 of your width*/
+     border: 1px solid #ccc;
+  background-color: #E8E8E8;
+}
+
+#addButton{
+
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>FoodHub</title>
+    <link rel="stylesheet" href="semantic/dist/semantic.min.css">
+	  <!--<link rel="stylesheet" href="FoodHub.css"> -->
+    <link rel="stylesheet" href="AddReview.css">
+       <script type="text/javascript" src="semantic/dist/semantic.min.js"></script>
+       <script type="text/javascript" src="FoodHubFunctionality.js"></script>
+     </head>
+
+  <body>
+<div id="header">
+        <div id="logo">
+          <img src= "Logo.png" id="SiteLogo"/>
+        </div>
+
+        <div id="userIcon">
+          <img src= "user-icon.png" id="iconProperties"/>
+        </div>
+</div>
+
+       <div class="addSection">
+      <section id="addSection">
+         <h1>Add a Review:</h1>
+       <form action="/review"method="POST">
+         <h2>Full Name</h2>
+         <input type="text" placeholder="Full Name" name="name">
+         <h2>Review</h2>
+         <input type="text" placeholder="Review" name="review">
+         <div id="buttonPosition"><button class="ui grey button" id="addButton">Submit</button></div>
+       </form>
+     </section>
+     </div>
+
+  </body>
+</html>
