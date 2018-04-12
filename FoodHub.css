@@ -12,12 +12,6 @@ header, section,  nav, footer {
   overflow: hidden;
 }
 
-table{
-    font-family: sans-serif;
-    width: 100%;
-    border: 1px solid black;
-}
-
 /*th, td{
   font-family: sans-serif;
   width: 100%;
@@ -125,11 +119,11 @@ table{
 }
 
 #userIcon{
-
-
-
-
-
+  margin-right: 10%;
+  float: right;
+  background-color: yellow;
+  height: 100px;
+  width: auto;
 }
 
 #iconProperties{
@@ -140,7 +134,6 @@ table{
 @media only screen and (min-width: 1200px){
   #sidebarUI {
     display: none;
-
   }
 }
 #sidebarUI{
