@@ -42,7 +42,7 @@ function activateCheats() {
   var audio = new Audio('Music.mp3');
   audio.play();
 
-  $('#iconProperties').src = "MAN.jpg";
+  //$('#Logo').src = "MAN.jpg";
 
   alert("cheats activated - Music By The man mith legand");
 
