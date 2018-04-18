@@ -37,7 +37,7 @@ app.get('/', function(req, res) {
 app.get('/logout', function(req, res) {
   req.session.loggedin = false;
   req.session.destroy();
-  res.redirect('/FoodHub-Login');
+  res.redirect('/FoodHub-Login.html');
 });
 
 
