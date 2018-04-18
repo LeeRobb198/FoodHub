@@ -5,4 +5,3 @@ function myFunction() {
     popup.classList.toggle("show");
 }
 </script>
-Try it Yourself »
