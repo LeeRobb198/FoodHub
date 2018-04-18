@@ -41,6 +41,9 @@ app.get('FoodHub-Login.html', function(req, res) {
   res.redirect('/FoodHub-Login.html');
 });*/
 
+app.get('FoodHub-Login.html', function(req, res) {
+  res.render('FoodHub-Login.html');
+});
 
 //the dologin route detasl with the data from the login screen.
 //the post variables, username and password ceom from the form on the login page.
