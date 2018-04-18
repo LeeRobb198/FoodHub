@@ -34,7 +34,7 @@
         <center><h1>Location</h1></center>
           <div id="filterOption">
             <label for="Location" id="titleFilterOptions">Your Location</label>
-            <input type="text" id="mainLocation" name="Location" placeholder="Location">
+            <input type="text" id="mobileLocation" name="Location" placeholder="Location">
           </div>
           <label for="lname">Distance</label>
           <div class="ui segment">
@@ -150,19 +150,19 @@
                   <div class="inline fields">
                     <div class="field">
                       <div class="ui radio checkbox">
-                        <input type="radio" name="frequency" checked="checked">
+                        <input type="radio" name="priceOption" checked="checked" value="1">
                         <label>Low</label>
                       </div>
                     </div>
                     <div class="field">
                       <div class="ui radio checkbox">
-                        <input type="radio" name="frequency">
+                        <input type="radio" name="priceOption" value="2">
                         <label>Medium</label>
                       </div>
                     </div>
                     <div class="field">
                       <div class="ui radio checkbox">
-                        <input type="radio" name="frequency">
+                        <input type="radio" name="priceOption" value="3">
                         <label>High</label>
                       </div>
                     </div>
@@ -253,6 +253,117 @@
 
     function initialiseMap() {
 
+      //Chicago
+      var center = new google.maps.LatLng(41.8781,-87.6298);
+
+      //New York
+      //var center = new google.maps.LatLng(40.7128,-74.0060);
+      //Aberdeen
+      //var center = new google.maps.LatLng(57.1497,-2.099075);
+
+      map = new google.maps.Map(document.getElementById('map'),{
+        center: center,
+        zoom: 8
+      });
+
+      //var center = new google.maps.LatLng(57.1497,-2.099075);
+      //map = new google.maps.Map(document.getElementById('map'),{
+        //center: center,
+        //zoom: 5
+      //});
+
+      //Finds restaurants
+      request = {
+        location: center,
+        radius: 8047,
+        types: ['restaurant'],
+        rating: 3,
+      };
+      infowindow = new google.maps.InfoWindow();
+
+      service = new google.maps.places.PlacesService(map);
+
+      service.nearbySearch(request, callback);
+
+      //Once Submit Button Hit
+      var button = document.getElementById('subButton');
+
+      google.maps.event.addDomListener(button, 'click', function() {
+        var newCenter = new google.maps.LatLng(41.8781,-87.6298);
+        clearResults(markers);
+
+        //Cuisine Option
+        var cuisine = document.getElementById("cuisineOption");
+        var userCuisineOption = cuisine.options[cuisine.selectedIndex].text;
+
+        //Rating Option
+        //var rating = document.getElementById("ratingOption");
+        //var userRatingOption = rating.options[rating.selectedIndex].value
+
+        //Price Option
+        var price = document.getElementsByName('priceOption');
+
+        for (var i = 0, length = price.length; i < length; i++){
+         if (price[i].checked){
+          var userPriceOption = price[i].value;
+          var minPrice = userPriceOption - 1;
+          break;
+         }
+        }
+
+        //Search Request
+        var request = {
+          location: newCenter,
+          radius: 8047,
+          types: ['restaurant'],
+          keyword: [userCuisineOption],
+          minPriceLevel: minPrice,
+          maxPriceLevel: userPriceOption,
+          //rating: [userRatingOption]
+        };
+        service.nearbySearch(request, callback);
+      })
+
+    }
+
+    function callback(results, status){
+      if(status == google.maps.places.PlacesServiceStatus.OK){
+        for (var i = 0; i < results.length; i++){
+          //createMarker(results[i]);
+          markers.push(createMarker(results[i]));
+        }
+      }
+    }
+
+    function createMarker(place){
+      var placeLoc = place.geometry.location;
+      var marker = new google.maps.Marker({
+        map: map,
+        position: place.geometry.location
+
+      });
+
+      google.maps.event.addListener(marker, 'click', function(){
+        infowindow.setContent(place.name);
+        infowindow.open(map, this);
+      });
+      return marker;
+    }
+
+    function clearResults(markers){
+      for (var m in markers){
+        markers[m].setMap(null)
+      }
+      markers = []
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialiseMap);
+
+    </script>
+
+    <!-- <script>
+    function initialiseMap() {
+
       //var start = document.getElementById("mainLocation").value;
       var center = new google.maps.LatLng(57.1497,-2.099075);
       map = new google.maps.Map(document.getElementById('map'),{
@@ -289,11 +400,8 @@
         var cuisine = document.getElementById("cuisineOption");
         var userCuisineOption = cuisine.options[cuisine.selectedIndex].text
 
-        //Rating Option
-        //var rating = document.getElementById("ratingOption");
-        //var userRatingOption = rating.options[rating.selectedIndex].value
-
         //Price Option
+        //var ratingValue;
 
         //Search Request
         var request = {
@@ -301,7 +409,7 @@
           radius: 8047,
           types: ['restaurant'],
           keyword: [userCuisineOption],
-          //rating: [userRatingOption]
+          //rating: [ratingValue]
         };
         service.nearbySearch(request, callback);
       })
@@ -311,24 +419,31 @@
     function callback(results, status){
       if(status == google.maps.places.PlacesServiceStatus.OK){
         for (var i = 0; i < results.length; i++){
-          //createMarker(results[i]);
-          markers.push(createMarker(results[i]));
+          var m = createMarker(results[i]);
+          markers.push(m);
+          //if (m){
+          //markers.push(m);
+          //}
         }
       }
     }
 
     function createMarker(place){
-      var placeLoc = place.geometry.location;
-      var marker = new google.maps.Marker({
-        map: map,
-        position: place.geometry.location
-      });
+      //if (place.rating >= ratingValue){
 
-      google.maps.event.addListener(marker, 'click', function(){
-        infowindow.setContent(place.name);
-        infowindow.open(map, this);
-      });
-      return marker;
+        var placeLoc = place.geometry.location;
+        var marker = new google.maps.Marker({
+          map: map,
+          position: place.geometry.location
+        });
+
+        google.maps.event.addListener(marker, 'click', function(){
+          infowindow.setContent(place.name);
+          infowindow.open(map, this);
+        });
+        return marker;
+      //}
+      //return null;
     }
 
     function clearResults(markers){
@@ -340,7 +455,7 @@
 
     google.maps.event.addDomListener(window, 'load', initialiseMap);
 
-    </script>
+    </script> -->
 
     <!-- Script for Google Map API -->
     <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKmr5cGY2-bu4wHPpMSxsvrpH5XM6-Cps&callback=myMap"></script> -->

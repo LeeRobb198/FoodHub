@@ -1,9 +1,9 @@
 function initAutocomplete() {
   // Create the autocomplete object, restricting the search to geographical
   // location types.
-  //autocomplete = new google.maps.places.Autocomplete(
-    ///** @type {!HTMLInputElement} */(document.getElementById('mobileLocation')),
-    //{types: ['geocode']});
+  autocomplete = new google.maps.places.Autocomplete(
+    /** @type {!HTMLInputElement} */(document.getElementById('mobileLocation')),
+    {types: ['geocode']});
 
   autocomplete = new google.maps.places.Autocomplete(
     /** @type {!HTMLInputElement} */(document.getElementById('mainLocation')),
