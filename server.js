@@ -6,7 +6,10 @@ const app = express();
 const path = require("path");
 
 app.use(bodyParser.urlencoded({extended:true}));
-app.use(express.static('public'));
+//app.use(express.static('public'));
+
+//set static path
+app.use(express.static(path.join(__dirname, 'public')));
 
 var db;
 
