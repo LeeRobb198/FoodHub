@@ -31,8 +31,13 @@ MongoClient.connect(url, function(err, database) {
 //this is our root route
 app.get('/', function(req, res) {
   //if the user is not logged in redirect them to the login page
-  if(!req.session.loggedin){res.redirect('pages/FoodHub-Login');return;}
+  if(!req.session.loggedin){res.redirect('/FoodHub-Login');return;}
 });
+//this is our login route, all it does is render the login.ejs page
+app.get('/FoodHub-Login', function(req, res) {
+  res.render('pages/FoodHub-Login');
+});
+
  // log out button
 
 /*app.get('/logout', function(req, res) {
@@ -41,9 +46,7 @@ app.get('/', function(req, res) {
   res.redirect('/FoodHub-Login.html');
 });*/
 
-app.get('pages/FoodHub-Login', function(req, res) {
-  res.render('pages/FoodHub-Login');
-});
+
 
 //the dologin route detasl with the data from the login screen.
 //the post variables, username and password ceom from the form on the login page.
