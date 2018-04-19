@@ -6,7 +6,7 @@ const express = require('express'); //npm install express
 const session = require('express-session'); //npm install express-session
 const bodyParser = require('body-parser'); //npm install body-parser
 const app = express();
-app.use(express.static(__dirname + 'pages'));
+app.use(express.static('/pages'));
 //this tells express we are using sesssions. These are variables that only belong to one user of the site at a time.
 app.use(session({ secret: 'example' }));
 
