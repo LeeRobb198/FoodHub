@@ -38,6 +38,10 @@ app.get('/FoodHub-Login', function(req, res) {
   res.render('pages/FoodHub-Login');
 });
 
+app.get('/FoodHub', function(req, res) {
+  res.render('pages/FoodHub');
+});
+
  // log out button
 
 /*app.get('/logout', function(req, res) {
@@ -51,7 +55,7 @@ app.get('/FoodHub-Login', function(req, res) {
 //the dologin route detasl with the data from the login screen.
 //the post variables, username and password ceom from the form on the login page.
 
-app.post('dologin', function(req, res) {
+app.post('/dologin', function(req, res) {
   console.log(JSON.stringify(req.body))
   var uname = req.body.username;
   var pword = req.body.password;
