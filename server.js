@@ -9,7 +9,9 @@ app.use(bodyParser.urlencoded({extended:true}));
 //app.use(express.static('public'));
 
 //set static path
-app.use(express.static(path.join(__dirname, 'public')));
+//app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(express.static('../client/', {index: 'index.html'}))
 
 var db;
 
