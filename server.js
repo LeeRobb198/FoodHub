@@ -38,9 +38,9 @@ app.get('/FoodHub-Login', function(req, res) {
   res.render('pages/FoodHub-Login');
 });
 
-// app.get('/FoodHub', function(req, res) {
-//   res.render('pages/FoodHub');
-// });
+app.get('/FoodHub', function(req, res) {
+  res.render('pages/FoodHub');
+ });
 
 
  // log out button
