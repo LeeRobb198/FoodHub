@@ -14,7 +14,7 @@ $(document).ready(function(){
       $('#showReviews').click(function(){
           $('#reviews').css({"display": "inline"});
           $.getJSON("server.js", function() {
-
+            console.log("Doing Something");
           });
       });
 });
