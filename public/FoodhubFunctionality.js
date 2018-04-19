@@ -13,7 +13,7 @@ $(document).ready(function(){
 
       $('#showReviews').click(function(){
           $('#reviews').css({"display": "inline"});
-          $.getJSON("server.js", function(data) {
+          $.getJSON("server.js", function() {
 
           });
       });
