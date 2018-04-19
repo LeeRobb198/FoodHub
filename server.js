@@ -14,7 +14,6 @@ app.use(bodyParser.urlencoded({
   extended: true
 }))
 
-app.set('pages', __dirname + '/pages');
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
