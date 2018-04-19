@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 //set static path
 //app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(express.static('public', {index: 'index.html'}))
+app.use(express.static('public', {index: 'Foodhub.html'}))
 
 var db;
 
