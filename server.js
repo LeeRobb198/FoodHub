@@ -62,7 +62,7 @@ app.post('pages/FoodHub-Login', function(req, res) {
     //if there is no result, redirect the user back to the login system as that username must not exist
     if(!result){res.redirect('pages/FoodHub-Login');return}
     //if there is a result then check the password, if the password is correct set session loggedin to true and send the user to the index
-    if(result.login.password == pword){ req.session.loggedin = true;  res.redirect('/') }
+    if(result.login.password == pword){ req.session.loggedin = true;  res.redirect('/FoodHub') }
     //otherwise send them back to login
     else{res.redirect('pages/FoodHub-Login')}
   });
