@@ -20,14 +20,20 @@
 
       <div id="userLoginContent">
         <center>
-          <div id="userLoginPanel">
+
+          <form action="/dologin" method="POST">
+            <input type="text" placeholder="username" name="username">
+            <input type="password" placeholder="password" name="password">
+            <button type="submit">Submit</button>
+          </form>
+          <!-- <div id="userLoginPanel">
           <img src= "user-icon.png" id="userIconLogin"/>
             <h1 id="usernameText">Username</h1>
               <input type="text" id="usenameInput" name="Username" placeholder="Username">
             <h1 id="passwordText">Password</h1>
               <input type="password" id="passwordInput" name="Password" placeholder="Password">
             <div id="buttonPosition"><button class="ui button" id="submitButton">Submit</button></div>
-          </div>
+          </div> -->
         </center>
       </div>
 
