@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }))
 
-app.use(express.static(__dirname + '../pages'));
+app.set('pages', __dirname + '/pages');
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
