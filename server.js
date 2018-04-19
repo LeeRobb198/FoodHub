@@ -10,7 +10,6 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 //set static path
 //app.use(express.static(path.join(__dirname, 'public')));
-
 app.use(express.static('public', {index: 'Foodhub.html'}))
 
 var db;
@@ -21,8 +20,8 @@ MongoClient.connect(url, function(err, database){
   app.listen(8080);
 });
 
-app.get('/',function(req,res){
-     res.sendFile('Foodhub.html');
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname + '/Foodhub.html'));
 });
 
 app.get('/all', function(req, res) {
