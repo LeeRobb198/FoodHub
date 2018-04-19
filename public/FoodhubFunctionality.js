@@ -11,8 +11,11 @@ $(document).ready(function(){
     $('.sidebar')
       .sidebar('attach events', '.item');
 
-
       $('#showReviews').click(function(){
           $('#reviews').css({"display": "inline"});
+          $.getJSON("server.js", function(result) {
+            console.log(result)
+            console.log("Doing Something")
+          });
       });
 });
