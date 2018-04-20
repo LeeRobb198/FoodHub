@@ -20,7 +20,7 @@ MongoClient.connect(url, function(err, database){
   app.listen(8080);
 });
 
-app.get('/data', function(req, res) {
+app.get('/data', function(req, res, err) {
     if (err) throw err;
 
     var output = "<h1>All the reviews</h1>";
