@@ -46,6 +46,9 @@ app.get('/Foodhub', function(req, res) {
  app.get('/FoodHub-T&C', function(req, res) {
    res.render('pages/FoodHub-T&C');
   });
+  app.get('/FoodHub-Register', function(req, res) {
+    res.render('pages/FoodHub-Register');
+   });
 
 
 
