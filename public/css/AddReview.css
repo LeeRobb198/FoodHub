@@ -1,0 +1,58 @@
+body{
+  margin: auto;
+
+}
+
+.ui.padded.grid{
+  height: 100%;
+}
+
+#header{
+  height: 115px;
+  width: 100%;
+  background-color: #E8E8E8;
+  display: flex;
+}
+
+#logo{
+  margin-left: 50px;
+  margin-top: 15px;
+  width: 25%;
+  height: 100%;
+}
+
+#SiteLogo{
+  float: left;
+  width: 25%;
+  height: 75%;
+  width: auto;
+  margin-right: 100%;
+}
+
+#userIcon{
+  padding-left: 60%;
+  height: 100px;
+  width: auto;
+}
+
+#iconProperties{
+  height: 100px;
+  width: 100px;
+}
+
+#addSection{
+  position:fixed;
+  top: 35%;
+  left: 50%;
+  height: 30em;
+  width: 38em;
+  margin-top: -10em;
+  margin-left: -19em;
+  border: 1px solid #ccc;
+  background-color: #E8E8E8;
+}
+
+#addButton{
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
