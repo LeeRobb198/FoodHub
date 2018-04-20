@@ -20,7 +20,7 @@ MongoClient.connect(url, function(err, database){
   app.listen(8080);
 });
 
-app.get('/', function(req, res) {
+app.get('/data', function(req, res) {
     if (err) throw err;
 
     var output = "<h1>All the reviews</h1>";
@@ -36,7 +36,7 @@ app.get('/', function(req, res) {
       }
 
   });
-  
+
 app.get('/all', function(req, res) {
 //    if (err) throw err;
 
