@@ -20,11 +20,27 @@ MongoClient.connect(url, function(err, database){
   app.listen(8080);
 });
 
+app.get('/', function(req, res) {
+    if (err) throw err;
 
+    var output = "<h1>All the reviews</h1>";
+
+      for (var i = 0; i < result.length; i++){
+        output += "<div>"
+        output += "<h3>" + result[i].name + "</h3>"
+        output +=  "<p>" + result[i].date
+        output +=  result[i].restaurant
+        output +=  result[i].review
+        output +=  result[i].rating + "</p>"
+        output += "</div>"
+      }
+
+  });
+  
 app.get('/all', function(req, res) {
 //    if (err) throw err;
 
-/*    var output = "<h1>All the reviews</h1>";
+/*  var output = "<h1>All the reviews</h1>";
 
     for (var i = 0; i < result.length; i++){
       output += "<div>"
