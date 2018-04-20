@@ -12,6 +12,9 @@ app.use(bodyParser.urlencoded({extended:true}));
 //app.use(express.static(path.join(__dirname, 'public')));
 //app.use(express.static('views', {index: 'index.ejs'}))
 
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
 var db;
 
 MongoClient.connect(url, function(err, database){
@@ -40,7 +43,7 @@ app.get('/', function(req, res) {
     });
   });
 */
-app.get('/all', function(req, res) {
+app.get('/', function(req, res) {
 //    if (err) throw err;
 
 /*  var output = "<h1>All the reviews</h1>";
@@ -55,6 +58,7 @@ app.get('/all', function(req, res) {
       output += "</div>"
     }
 */
+    res.render('index');
     //Gathers review_data from mongodb, then outputs at JSON
     db.collection('data').find({}).toArray(function(err, result) {
 	     if (err) throw err;
