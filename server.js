@@ -1,23 +1,31 @@
 const MongoClient = require('mongodb').MongoClient;
 const url = "mongodb://localhost:27017/review_data";
-const express = require('express');
-const bodyParser = require('body-parser');
-const app = express();
 const path = require("path");
-
+const express = require('express'); //npm install express
+const session = require('express-session'); //npm install express-session
+const bodyParser = require('body-parser'); //npm install body-parser
+const app = express();
+app.use(express.static(__dirname + '/public'));
+app.set('views', __dirname + '/views');
 app.use(bodyParser.urlencoded({extended:true}));
-//app.use(express.static('public'));
+//this tells express we are using sesssions. These are variables that only belong to one user of the site at a time.
+app.use(session({ secret: 'example' }));
 
-//set static path
-//app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static('public', {index: 'Foodhub.html'}))
+app.use(bodyParser.urlencoded({
+  extended: true
+}))
+
+// set the view engine to ejs
+app.set('view engine', 'ejs');
 
 var db;
 
-MongoClient.connect(url, function(err, database){
-  if(err) throw err;
+//this is our connection to the mongo db, ts sets the variable db as our database
+MongoClient.connect(url, function(err, database) {
+  if (err) throw err;
   db = database;
   app.listen(8080);
+  console.log('listening on 8080');
 });
 
 /*
@@ -40,7 +48,25 @@ app.get('/', function(req, res) {
     });
   });
 */
+
+//this is our root route
 app.get('/', function(req, res) {
+  //if the user is not logged in redirect them to the login page
+  if(!req.session.loggedin){res.redirect('/FoodHub');return;}
+});
+//this is our login route, all it does is render the login.ejs page
+app.get('/FoodHub-Login', function(req, res) {
+  res.render('pages/FoodHub-Login');
+});
+
+app.get('/Foodhub', function(req, res) {
+  res.render('pages/Foodhub');
+ });
+ app.get('/FoodHub-T&C', function(req, res) {
+   res.render('pages/FoodHub-T&C');
+  });
+
+app.get('/all', function(req, res) {
 //    if (err) throw err;
 
 /*  var output = "<h1>All the reviews</h1>";
