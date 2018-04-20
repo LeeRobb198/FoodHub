@@ -58,7 +58,7 @@ app.get('/', function(req, res) {
       output += "</div>"
     }
 */
-    res.render('index');
+    res.render('Foodhub');
     //Gathers review_data from mongodb, then outputs at JSON
     db.collection('data').find({}).toArray(function(err, result) {
 	     if (err) throw err;
