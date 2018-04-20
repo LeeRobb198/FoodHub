@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 //set static path
 //app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static('public', {index: 'Foodhub.html'}))
+app.use(express.static('views', {index: 'index.ejs'}))
 
 var db;
 
@@ -54,6 +54,7 @@ app.get('/all', function(req, res) {
       output += "</div>"
     }
 */
+    //Gathers review_data from mongodb, then outputs at JSON
     db.collection('data').find({}).toArray(function(err, result) {
 	     if (err) throw err;
         res.json(result);
