@@ -20,7 +20,8 @@ MongoClient.connect(url, function(err, database){
   app.listen(8080);
 });
 
-app.get('/data', function(req, res, err) {
+app.get('/data', function(req, res) {
+  db.collection('quotes').find().toArray(function(err, result){
     if (err) throw err;
 
     var output = "<h1>All the reviews</h1>";
@@ -34,7 +35,7 @@ app.get('/data', function(req, res, err) {
         output +=  result[i].rating + "</p>"
         output += "</div>"
       }
-
+    });
   });
 
 app.get('/all', function(req, res) {
