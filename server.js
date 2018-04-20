@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 //set static path
 //app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static('views', {index: 'index.ejs'}))
+//app.use(express.static('views', {index: 'index.ejs'}))
 
 var db;
 
