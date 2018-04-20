@@ -20,6 +20,7 @@ MongoClient.connect(url, function(err, database){
   app.listen(8080);
 });
 
+/*
 app.get('/', function(req, res) {
   db.collection('data').find().toArray(function(err, result){
     if (err) throw err;
@@ -38,7 +39,7 @@ app.get('/', function(req, res) {
       res.send(output);
     });
   });
-
+*/
 app.get('/all', function(req, res) {
 //    if (err) throw err;
 
