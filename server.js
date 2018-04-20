@@ -20,7 +20,7 @@ MongoClient.connect(url, function(err, database){
   app.listen(8080);
 });
 
-app.get('/find', function(req, res) {
+app.get('/', function(req, res) {
   db.collection('data').find().toArray(function(err, result){
     if (err) throw err;
 
