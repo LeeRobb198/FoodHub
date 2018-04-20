@@ -10,10 +10,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 //set static path
 //app.use(express.static(path.join(__dirname, 'public')));
-//app.use(express.static('views', {index: 'index.ejs'}))
-
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
+app.use(express.static('views', {index: 'Foodhub.html'}))
 
 var db;
 
