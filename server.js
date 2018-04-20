@@ -35,6 +35,7 @@ app.get('/data', function(req, res) {
         output +=  result[i].rating + "</p>"
         output += "</div>"
       }
+      res.send(output);
     });
   });
 
