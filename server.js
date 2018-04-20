@@ -7,6 +7,7 @@ const session = require('express-session'); //npm install express-session
 const bodyParser = require('body-parser'); //npm install body-parser
 const app = express();
 app.use(express.static(__dirname + '/public'));
+app.set('views', __dirname + '/views');
 //this tells express we are using sesssions. These are variables that only belong to one user of the site at a time.
 app.use(session({ secret: 'example' }));
 
@@ -39,8 +40,8 @@ app.get('/FoodHub-Login', function(req, res) {
   res.render('pages/FoodHub-Login');
 });
 
-app.get('/FoodHub', function(req, res) {
-  res.render('pages/FoodHub');
+app.get('/Foodhub', function(req, res) {
+  res.render('pages/Foodhub');
  });
  app.get('/FoodHub-T&C', function(req, res) {
    res.render('pages/FoodHub-T&C');
