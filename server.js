@@ -87,7 +87,7 @@ app.post('/dologin', function(req, res) {
 
 var datatostore = {
 
-"login":{"username":req.body.username,"password":req.body.password}
+"login":{"username":req.body.username,"password":req.body.password}}
 
 
 
