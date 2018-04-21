@@ -54,11 +54,11 @@ app.get('/Foodhub', function(req, res) {
 
  // log out button
 
-/*app.get('/logout', function(req, res) {
+app.get('/logout', function(req, res) {
   req.session.loggedin = false;
   req.session.destroy();
   res.redirect('/FoodHub-Login.html');
-});*/
+});
 
 
 
@@ -87,7 +87,8 @@ app.post('/FoodHub-Register', function(req, res) {
 
 var datatostore = {
 
-"login":{"username":req.body.username,"password":req.body.password}}
+"login":{"username":req.body.username,"password":req.body.password}
+}
 
 
 
