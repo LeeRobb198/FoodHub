@@ -83,7 +83,7 @@ app.post('/dologin', function(req, res) {
 });
 
 
-
+app.post('/doupdate', function(req, res) {
 
 var datatostore = {
 
