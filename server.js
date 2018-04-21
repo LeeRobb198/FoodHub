@@ -83,11 +83,7 @@ app.post('/dologin', function(req, res) {
 });
 
 
-app.post('/adduser', function(req, res) {
-  //check we are logged in
-  if(!req.session.loggedin){res.redirect('/login');return;}
 
-  //we create the data strin  g from the form components that have been passed in
 
 var datatostore = {
 
