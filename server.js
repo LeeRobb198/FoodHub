@@ -81,3 +81,25 @@ app.post('/dologin', function(req, res) {
     else{res.redirect('/FoodHub-Login')}
   });
 });
+
+
+app.post('/adduser', function(req, res) {
+  //check we are logged in
+  if(!req.session.loggedin){res.redirect('/login');return;}
+
+  //we create the data strin  g from the form components that have been passed in
+
+var datatostore = {
+
+"login":{"username":req.body.username,"password":req.body.password},
+
+
+
+//once created we just run the data string against the database and all our new data will be saved/
+  db.collection('people').save(datatostore, function(err, result) {
+    if (err) throw err;
+    console.log('saved to database')
+    //when complete redirect to the index
+    res.redirect('/')
+  })
+});
