@@ -83,7 +83,7 @@ app.post('/dologin', function(req, res) {
 });
 
 
-app.post('/doupdate', function(req, res) {
+app.post('/FoodHub-Register', function(req, res) {
 
 var datatostore = {
 
