@@ -57,17 +57,18 @@ app.get('/', function(req, res) {
   res.render('pages/Foodhub')
 
 
-/*  db.collection('data').find({}).toArray(function(err, result) {
+/ db.collection('data').find({}).toArray(function(err, result) {
      if (err) throw err;
       res.render(json(result));
-  }); */
+  });
+  /*
       db.data.find(function(err, docs){
         console.log("working");
         res.render('pages/Foodhub',{
-          
-        })
 
-      }
+        })
+*/
+
 });
 //this is our login route, all it does is render the login.ejs page
 app.get('/FoodHub-Login', function(req, res) {
