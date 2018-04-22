@@ -19,6 +19,17 @@
 
       <div id="userLoginContent">
         <center>
+          <form class="ui form" action="/dologin" method="POST">
+            <div class="two wide field center aligned">
+            <label>Username</label>
+            <input type="text" name="username" placeholder="username">
+            </div>
+            <div class="two wide field center aligned">
+            <label>Password</label>
+            <input type="password" name="password" placeholder="password">
+            </div>
+            <button class="ui button" type="submit">Log in</button>
+          </form>
 
           <form class"ui form" action="/dologin" method="POST">
             <input type="text" placeholder="username" name="username">
