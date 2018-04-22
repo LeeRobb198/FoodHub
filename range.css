@@ -1,7 +1,10 @@
 /*!
  * # Range slider for Semantic UI.
- * 
+ *
  */
+
+
+/*
 
 .ui.range {
 	width: 100%;
@@ -60,11 +63,16 @@
 	box-shadow: 0 1px 2px 0 rgba(34,36,38,.15),0 0 0 1px rgba(34,36,38,.15) inset;
 }
 
+
 /*--------------
      Colors
 ---------------*/
 
+
+
 /* Red */
+
+/*
 .ui.red.range .inner .track-fill {
 	background-color: #DB2828;
 }
@@ -73,6 +81,7 @@
 }
 
 /* Orange */
+/*
 .ui.orange.range .inner .track-fill {
 	background-color: #F2711C;
 }
@@ -81,6 +90,7 @@
 }
 
 /* Yellow */
+/*
 .ui.yellow.range .inner .track-fill {
 	background-color: #FBBD08;
 }
@@ -89,6 +99,7 @@
 }
 
 /* Olive */
+/*
 .ui.olive.range .inner .track-fill {
 	background-color: #B5CC18;
 }
@@ -97,6 +108,7 @@
 }
 
 /* Green */
+/*
 .ui.green.range .inner .track-fill {
 	background-color: #21BA45;
 }
@@ -105,6 +117,7 @@
 }
 
 /* Teal */
+/*
 .ui.teal.range .inner .track-fill {
 	background-color: #00B5AD;
 }
@@ -113,6 +126,7 @@
 }
 
 /* Blue */
+/*
 .ui.blue.range .inner .track-fill {
 	background-color: #2185D0;
 }
@@ -121,6 +135,7 @@
 }
 
 /* Violet */
+/*
 .ui.violet.range .inner .track-fill {
 	background-color: #6435C9;
 }
@@ -129,6 +144,7 @@
 }
 
 /* Purple */
+/*
 .ui.purple.range .inner .track-fill {
 	background-color: #A333C8;
 }
@@ -137,6 +153,7 @@
 }
 
 /* Pink */
+/*
 .ui.pink.range .inner .track-fill {
 	background-color: #E03997;
 }
@@ -145,6 +162,7 @@
 }
 
 /* Brown */
+/*
 .ui.brown.range .inner .track-fill {
 	background-color: #A5673F;
 }
@@ -153,6 +171,7 @@
 }
 
 /* Grey */
+/*
 .ui.grey.range .inner .track-fill {
 	background-color: #767676;
 }
@@ -161,6 +180,7 @@
 }
 
 /* Black */
+/*
 .ui.black.range .inner .track-fill {
 	background-color: #1b1c1d;
 }
@@ -171,6 +191,7 @@
 /*--------------
     Disabled
 ---------------*/
+/*
 .ui.range.disabled {
 	opacity: .5;
 }
@@ -181,4 +202,38 @@
 
 .ui.range.disabled .inner .track-fill {
 	background: #ccc;
+}
+
+*/
+
+/* Slider Test */
+
+	.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #5cacf0;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #5cacf0;
+    cursor: pointer;
 }
