@@ -44,7 +44,7 @@ var users =[
 app.get('/', function(req, res) {
   //if the user is not logged in redirect them to the login page
   //if(!req.session.loggedin){res.redirect('/FoodHub-Login');return;}
-  db.users.find(function (err, docs){
+  db.collection('users').find(function (err, docs){
     console.log(docs);
     res.render('pages/Foodhub', {
         title: 'Reviews',
