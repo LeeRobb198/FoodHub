@@ -230,8 +230,12 @@
         </table>
       </div>
 
-
-
+      <h1><%= title %><h1>
+        <ul>
+          <% data.forEach(function(data){ %>
+            <li><%= data.name %></li>
+            <% }) %>
+          </ul>
       </div>
 
 

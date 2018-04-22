@@ -40,7 +40,11 @@ MongoClient.connect(url, function(err, database) {
 app.get('/', function(req, res) {
   //if the user is not logged in redirect them to the login page
   //if(!req.session.loggedin){res.redirect('/FoodHub-Login');return;}
-    res.render('pages/Foodhub');
+    res.render('pages/Foodhub', {
+        title: 'Reviews'
+        data: data
+  });
+
 });
 //this is our login route, all it does is render the login.ejs page
 app.get('/FoodHub-Login', function(req, res) {
@@ -55,21 +59,8 @@ app.get('/Foodhub', function(req, res) {
   });
 
 
+//Test mongodb data
 app.get('/all', function(req, res) {
-//    if (err) throw err;
-
-/*  var output = "<h1>All the reviews</h1>";
-
-    for (var i = 0; i < result.length; i++){
-      output += "<div>"
-      output += "<h3>" + result[i].name + "</h3>"
-      output +=  "<p>" + result[i].date
-      output +=  result[i].restaurant
-      output +=  result[i].review
-      output +=  result[i].rating + "</p>"
-      output += "</div>"
-    }
-*/
     //Gathers review_data from mongodb, then outputs at JSON
     db.collection('data').find({}).toArray(function(err, result) {
 	     if (err) throw err;
