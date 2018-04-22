@@ -15,4 +15,8 @@ $(document).ready(function(){
       $('#showReviews').click(function(){
           $('#reviews').css({"display": "inline"});
       });
+
+      $('#write').click(function(){
+        window.location.href = "addReview.ejs"
+      });
 });
