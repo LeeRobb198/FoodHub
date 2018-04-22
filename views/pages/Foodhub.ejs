@@ -1,19 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>FoodHub</title>
-      <link rel="stylesheet" href="css/range.css">
-      <link rel="stylesheet" href="semantic/dist/semantic.min.css">
-	     <link rel="stylesheet" href="css/FoodHub.css">
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>FoodHub</title>
+        <link rel="stylesheet" href="css/range.css">
+        <link rel="stylesheet" href="semantic/dist/semantic.min.css">
+  	     <link rel="stylesheet" href="css/FoodHub.css">
 
-       <!-- Leaflet stylesheet -->
-       <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
-       <!-- Leaflet script -->
-       <script  src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+         <!-- Script for AutoComplete -->
+         <script script type="text/javascript" src="AutoComplete.js"></script>
 
   </head>
-
   <body>
 
 
@@ -247,9 +244,13 @@
     <script src="js/konami.js"></script>
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="js/range.js"></script>
+    <script type="text/javascript" src="GoogleMap.js"></script>
     <script type="text/javascript" src="semantic/dist/semantic.min.js"></script>
     <script type="text/javascript" src="js/FoodhubFunctionality.js"></script>
     <script type="text/javascript" src="js/map.js"></script>
+
+    <!-- Script for Google AutoComplete and Map issue with separate scripts for api so combined however not doing the autocomplete -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKmr5cGY2-bu4wHPpMSxsvrpH5XM6-Cps&libraries=places&callback=callFunctions" async defer></script>
 
   </body>
 </html>
