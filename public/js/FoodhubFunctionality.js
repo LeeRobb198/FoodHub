@@ -11,12 +11,9 @@ $(document).ready(function(){
     $('.sidebar')
       .sidebar('attach events', '.item');
 
-
       $('#showReviews').click(function(){
           $('#reviews').css({"display": "inline"});
       });
 
-      $('#write').click(function(){
-        window.location.href = "pages/addReview"
-      });
+
 });
