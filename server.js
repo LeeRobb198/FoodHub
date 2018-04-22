@@ -1,5 +1,5 @@
 const MongoClient = require('mongodb').MongoClient;
-const url = "mongodb://localhost:27017/review_data";
+const url = "mongodb://localhost:27017/review_app";
 const path = require("path");
 const express = require('express'); //npm install express
 const session = require('express-session'); //npm install express-session
@@ -44,7 +44,7 @@ var users =[
 app.get('/', function(req, res) {
   //if the user is not logged in redirect them to the login page
   //if(!req.session.loggedin){res.redirect('/FoodHub-Login');return;}
-  db.collection('data').find(function (err, result){
+  db.collection('users').find(function (err, result){
     console.log(result);
     res.render('pages/Foodhub', {
         title: 'Reviews',
