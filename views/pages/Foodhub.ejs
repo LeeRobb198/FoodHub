@@ -91,100 +91,100 @@
       <div id="header">
         <!-- Logo -->
         <div id="logo">
-            <img src= "Logo.png" id="SiteLogo"/>
+            <img src= "Pictures/Logo.png" id="SiteLogo"/>
         </div>
         <!-- User Icon -->
         <div class="right floated left aligned six wide column">
           <a href="FoodHub-Login.html">
-            <img src= "user-icon.png" id="iconProperties"/>
+            <img src= "Pictures/user-icon.png" id="iconProperties"/>
           </a>
         </div>
       </div>
 
       <!-- End of header content ------------------------------------------------------------->
-      <div id="sidebar" class="four wide computer column computer only">
-        <div class="ui segment">
-          <div class="ui form" action="SelectMenu" method="get">
-            <center><h1>Location</h1></center>
-              <div id="filterOption">
-                <label for="Location" id="titleFilterOptions">Your Location</label>
-                <input type="text" id="mainLocation" name="Location" placeholder="Location">
-              </div>
-              <label for="lname">Distance</label>
+            <div id="sidebar" class="four wide computer column computer only">
               <div class="ui segment">
-                <div class="slidecontainer">
-                  <input type="range" min="1" max="8047" value="50" id="distanceOption" class="slider">
-                </div>
-                <!-- <div class="ui labeled range">
-                  <input type="range" min="1" max="8047" value="50" id="distanceOption">
-                </div> -->
-              </div>
-
-              <center><div id="separator"></div></center>
-
-              <div class="ui segment">
-                <center><h1>Filters</h1></center>
-                <h5>Cuisine</h5>
-                  <select class="ui dropdown" id="cuisineOption">
-                    <option value="0">Any</option>
-                    <option value="1">Japanese</option>
-                    <option value="2">American</option>
-                    <option value="3">Chinese</option>
-                    <option value="4">Thai</option>
-                    <option value="5">Greek</option>
-                    <option value="6">Indian</option>
-                    <option value="7">Italian</option>
-                    <option value="8">Mexican</option>
-                  </select>
-
-                <div class="ui form" id="price-range">
-                  <h5>Price Range</h5>
-                  <div class="inline fields">
-                    <div class="field">
-                      <div class="ui radio checkbox">
-                        <input type="radio" name="priceOption" checked="checked" value="1">
-                        <label>Low</label>
-                      </div>
+                <div class="ui form" action="SelectMenu" method="get">
+                  <center><h1>Location</h1></center>
+                    <div id="filterOption">
+                      <label for="Location" id="titleFilterOptions">Your Location</label>
+                      <input type="text" id="mainLocation" name="Location" placeholder="Location">
                     </div>
-                    <div class="field">
-                      <div class="ui radio checkbox">
-                        <input type="radio" name="priceOption" value="2">
-                        <label>Medium</label>
+                    <label for="lname">Distance</label>
+                    <div class="ui segment">
+                      <div class="slidecontainer">
+                        <input type="range" min="1" max="8047" value="50" id="distanceOption" class="slider">
                       </div>
+                      <!-- <div class="ui labeled range">
+                        <input type="range" min="1" max="8047" value="50" id="distanceOption">
+                      </div> -->
                     </div>
-                    <div class="field">
-                      <div class="ui radio checkbox">
-                        <input type="radio" name="priceOption" value="3">
-                        <label>High</label>
+
+                    <center><div id="separator"></div></center>
+
+                    <div class="ui segment">
+                      <center><h1>Filters</h1></center>
+                      <h5>Cuisine</h5>
+                        <select class="ui dropdown" id="cuisineOption">
+                          <option value="0">Any</option>
+                          <option value="1">Japanese</option>
+                          <option value="2">American</option>
+                          <option value="3">Chinese</option>
+                          <option value="4">Thai</option>
+                          <option value="5">Greek</option>
+                          <option value="6">Indian</option>
+                          <option value="7">Italian</option>
+                          <option value="8">Mexican</option>
+                        </select>
+
+                      <div class="ui form" id="price-range">
+                        <h5>Price Range</h5>
+                        <div class="inline fields">
+                          <div class="field">
+                        <div class="ui radio checkbox">
+                          <input type="radio" name="priceOption" checked="checked" value="1">
+                          <label>Low</label>
+                            </div>
+                          </div>
+                          <div class="field">
+                            <div class="ui radio checkbox">
+                              <input type="radio" name="priceOption" value="2">
+                              <label>Medium</label>
+                            </div>
+                          </div>
+                          <div class="field">
+                        <div class="ui radio checkbox">
+                          <input type="radio" name="priceOption" value="3">
+                          <label>High</label>
+                        </div>
                       </div>
-                    </div>
                   </div>
+                  </div>
+
+                  <h5> Star rating </h5>
+                  <div class="ui massive star rating" data-max-rating="5" data-id="ratingOption"></div>
                 </div>
 
-                <h5> Star rating </h5>
-                <div class="ui massive star rating" data-max-rating="5" data-id="ratingOption"></div>
+                <div id="submitButton">
+                <button class="ui blue button" id="subButton">Submit</button>
               </div>
 
-              <div id="submitButton">
-              <button class="ui blue button" id="subButton">Submit</button>
             </div>
-
           </div>
+
+          <!-- Button used to show reviews for now as api has not been fully implemented -->
+          <button id="showReviews">Show Reviews</button>
         </div>
 
-        <!-- Button used to show reviews for now as api has not been fully implemented -->
-        <button id="showReviews">Show Reviews</button>
+
+      <!-- End of sidebar content ------------------------------------------------------------->
+      <!-- Start of main content (Map and Reviews) -------------------------------------------->
+
+      <div id="content" class="twelve wide computer sixteen wide mobile column">
+
+              <div id="map">
+
       </div>
-
-
-<!-- End of sidebar content ------------------------------------------------------------->
-        <!-- Start of main content (Map and Reviews) -------------------------------------------->
-
-      <div id="content" class="thirteen wide computer sixteen wide mobile column">
-
-        <div id="map">
-
-        </div>
         <div id ="reviews">
         <table class="ui padded compact sigle line table">
           <thead>
