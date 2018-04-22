@@ -1,5 +1,5 @@
 const MongoClient = require('mongodb').MongoClient;
-const url = "mongodb://localhost:27017/review_app";
+const url = "mongodb://localhost:27017/review_data";
 const path = require("path");
 const express = require('express'); //npm install express
 const session = require('express-session'); //npm install express-session
