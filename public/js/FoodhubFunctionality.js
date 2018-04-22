@@ -17,6 +17,6 @@ $(document).ready(function(){
       });
 
       $('#write').click(function(){
-        window.location.href = "pages/addReview.html"
+        window.location.href = "pages/addReview"
       });
 });
