@@ -49,7 +49,6 @@ app.get('/Foodhub', function(req, res) {
    res.render('pages/FoodHub-T&C');
   });
   app.get('/FoodHub-Register', function(req, res) {
-      if(!req.session.loggedin){res.redirect('/FoodHub-login');return;}
     res.render('pages/FoodHub-Register');
    });
 
