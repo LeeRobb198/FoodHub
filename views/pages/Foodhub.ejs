@@ -214,37 +214,18 @@
           </thead>
           <tbody>
             <% users.forEach(function(users){ %>
+              <tr>
               <td><%= users.name %></td>
               <td><%= users.date %></td>
               <td><%= users.restaurant %></td>
               <td><%= users.review %></td>
               <td><%= users.rating %></td>
+            </tr>
               <% }) %>
-            <tr>
-              <td>John Lilki</td>
-              <td>September 14, 2013</td>
-              <td>This restaurant is great. I hope to go back soon.</td>
-            </tr>
-            <tr>
-              <td>Jamie Harington</td>
-              <td>January 11, 2014</td>
-              <td>This restaurant is great. I hope to go back soon.</td>
-            </tr>
-            <tr>
-              <td>Jill Lewis</td>
-              <td>May 11, 2014</td>
-              <td>This restaurant is great. I hope to go back soon.</td>
-            </tr>
           </tbody>
         </table>
       </div>
 
-      <h1><%= title %><h1>
-        <ul>
-          <% users.forEach(function(users){ %>
-            <li><%= users.name %></li>
-            <% }) %>
-          </ul>
       </div>
 
 

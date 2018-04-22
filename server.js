@@ -47,7 +47,6 @@ app.get('/', function(req, res) {
   db.collection('data').find({}).toArray(function(err, result) {
     console.log(result);
     res.render('pages/Foodhub', {
-        title: 'Reviews',
         users: result
       });
   });
