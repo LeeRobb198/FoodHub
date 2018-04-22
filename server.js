@@ -36,9 +36,13 @@ MongoClient.connect(url, function(err, database) {
   console.log('listening on 8080');
 });
 
-var users = [
+var users =[
   {
     name: "Oliver Hadden",
+    review: "This restaurant is great. I hope to go back soon."
+  },
+  {
+    name: "Ben Hadden",
     review: "This restaurant is great. I hope to go back soon."
   }
 ]
