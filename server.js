@@ -36,13 +36,20 @@ MongoClient.connect(url, function(err, database) {
   console.log('listening on 8080');
 });
 
+var users = [
+  {
+    name: "Oliver Hadden",
+    review: "This restaurant is great. I hope to go back soon."
+  }
+]
+
 //this is our root route
 app.get('/', function(req, res) {
   //if the user is not logged in redirect them to the login page
   //if(!req.session.loggedin){res.redirect('/FoodHub-Login');return;}
     res.render('pages/Foodhub', {
         title: 'Reviews'
-        data: data
+        users: users
   });
 
 });
