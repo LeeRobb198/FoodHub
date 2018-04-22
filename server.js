@@ -44,11 +44,11 @@ var users =[
 app.get('/', function(req, res) {
   //if the user is not logged in redirect them to the login page
   //if(!req.session.loggedin){res.redirect('/FoodHub-Login');return;}
-  db.collection('data').find(function (err, docs){
-    console.log(docs);
+  db.collection('data').find(function (err, result){
+    console.log(result);
     res.render('pages/Foodhub', {
         title: 'Reviews',
-        users: docs
+        users: result
       });
   });
 });
