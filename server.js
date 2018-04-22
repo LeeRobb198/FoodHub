@@ -1,5 +1,5 @@
 const MongoClient = require('mongodb').MongoClient;
-const url = "mongodb://localhost:27017/review_data";
+const url = "mongodb://localhost:27017/review_app";
 const path = require("path");
 const express = require('express'); //npm install express
 const session = require('express-session'); //npm install express-session
@@ -20,13 +20,6 @@ app.use(bodyParser.urlencoded({
 app.set('view engine', 'ejs');
 
 var db;
-
-//this is our connection to the mongo db, ts sets the variable db as our database
-// set the view engine to ejs
-app.set('view engine', 'ejs');
-
-var db;
-
 
 //this is our connection to the mongo db, ts sets the variable db as our database
 MongoClient.connect(url, function(err, database) {
@@ -51,9 +44,12 @@ var users =[
 app.get('/', function(req, res) {
   //if the user is not logged in redirect them to the login page
   //if(!req.session.loggedin){res.redirect('/FoodHub-Login');return;}
+  db.users.find(function (err, docs){
+    console.log(docs);
     res.render('pages/Foodhub', {
         title: 'Reviews',
-        users: users
+        users: docs
+      });
   });
 });
 //this is our login route, all it does is render the login.ejs page
