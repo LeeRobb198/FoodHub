@@ -52,10 +52,9 @@ app.get('/', function(req, res) {
   //if the user is not logged in redirect them to the login page
   //if(!req.session.loggedin){res.redirect('/FoodHub-Login');return;}
     res.render('pages/Foodhub', {
-        title: 'Reviews'
+        title: 'Reviews',
         users: users
   });
-
 });
 //this is our login route, all it does is render the login.ejs page
 app.get('/FoodHub-Login', function(req, res) {
