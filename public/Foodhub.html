@@ -9,6 +9,7 @@
       <link rel="stylesheet" href="range.css">
       <link rel="stylesheet" href="semantic/dist/semantic.min.css">
 	     <link rel="stylesheet" href="FoodHub.css">
+       <link rel="stylesheet" href="Useablity.css">
 
        <!-- Leaflet stylesheet -->
        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
@@ -190,6 +191,15 @@
 
         <!-- Button used to show reviews for now as api has not been fully implemented -->
         <button id="showReviews">Show Reviews</button>
+        <button type="button" onclick="ColourBlind()">Colour Blind</button>
+
+        <script>
+         function ColourBlind() {
+        document.sidebar.style.backgroundColor = "red";
+        }
+       </script>
+
+
       </div>
 
 
@@ -249,8 +259,8 @@
     </div>
 
 
-
-    <script src="js/konami.js"></script>
+    <script src="Useablity.js"></script>
+    <script src="konami.js"></script>
     <script type="text/javascript" src="http://helium-brave.8080.codio.io/Coursework/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="range.js"></script>
     <script type="text/javascript" src="semantic/dist/semantic.min.js"></script>
