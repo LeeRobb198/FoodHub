@@ -45,7 +45,7 @@ function initialiseMap() {
   service.nearbySearch(request, callback);
 
   //Once Submit Button Hit -------------------------------------------------
-  var button = document.getElementById('subButton');
+  var button = document.getElementById('submitButton');
 
   //Geocoder
   var geocoder = new google.maps.Geocoder();
