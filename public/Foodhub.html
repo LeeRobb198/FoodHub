@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<meta name=”description” content=”FoodHub”>
+
+<meta name=”keywords” content=”restaurant, Japanese, American, Chinese, Thai, Greek, Indian, Italian, Mexican” />
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -7,8 +10,15 @@
       <link rel="stylesheet" href="semantic/dist/semantic.min.css">
 	     <link rel="stylesheet" href="FoodHub.css">
 
+<<<<<<< HEAD
+       <!-- Leaflet stylesheet -->
+       <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+       <!-- Leaflet script -->
+       <script  src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+=======
        <!-- Script for AutoComplete -->
        <script script type="text/javascript" src="AutoComplete.js"></script>
+>>>>>>> test
 
   </head>
 
@@ -22,8 +32,8 @@
     </div>
 
 
-
     <div id="sidebar" class="ui sidebar top mobile only">
+
       <div class="ui segment">
       <div class="ui form" action="SelectMenu" method="get">
         <center><h1>Location</h1></center>
@@ -192,34 +202,51 @@
         <div id="map">
 
         </div>
-        <div id="reviews">
-          <table id="reviewsTable">
-            <thead>
+        <div id ="reviews">
+        <table class="ui padded compact sigle line table">
+          <thead>
             <tr>
-              <th>Reviews</th>
+              <th>Name</th>
+              <th>Review Date</th>
+              <th>Review</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td> This is where the reviews will pop up when you select a restaurant </p>
-              </td>
+              <td>John Lilki</td>
+              <td>September 14, 2013</td>
+              <td>This restaurant is great. I hope to go back soon.</td>
             </tr>
             <tr>
-              <td> Item 2.</td>
+              <td>Jamie Harington</td>
+              <td>January 11, 2014</td>
+              <td>This restaurant is great. I hope to go back soon.</td>
+            </tr>
+            <tr>
+              <td>Jill Lewis</td>
+              <td>May 11, 2014</td>
+              <td>This restaurant is great. I hope to go back soon.</td>
             </tr>
           </tbody>
         </table>
-        </div>
+      </div>
 
-        </div>
 
 
       </div>
+
+
       <!-- End of main content (Map and Reviews) ---------------------------------------------->
+
+      <div id="footer"></div>
+
+      </div>
+
       <div id="footer">
         <a href="FoodHub-T&C.html" id="terms">Terms</a>
       </div>
     </div>
+
 
 
     <script src="js/konami.js"></script>
