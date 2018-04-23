@@ -6,9 +6,6 @@ body{
 
 header, section,  nav, footer {
   font-family: sans-serif;
-  /* border: 1px dotted #000; */
-  /* padding: 10px; */
-  /* margin: 10px; */
   overflow: hidden;
 }
 
@@ -87,7 +84,6 @@ header, section,  nav, footer {
   float: left;
   height: 100%;
   width: auto;
-
 }
 
 #reviews{
@@ -96,6 +92,10 @@ header, section,  nav, footer {
   position: relative;
 }
 
+#reviewsTable{
+  margin-top: 13px;
+  border: solid;
+}
 
 #footer{
   width: 100%;
@@ -103,6 +103,11 @@ header, section,  nav, footer {
   background-color: #E8E8E8;
 }
 
+#userIcon{
+  padding-left: 60%;
+ height: 100px;
+ width: auto
+}
 
 #iconProperties{
   height: 100px;
@@ -112,24 +117,23 @@ header, section,  nav, footer {
 @media only screen and (min-width: 1200px){
   #sidebarUI {
     display: none;
-
   }
 }
+
 #sidebarUI{
-padding-top: 3%;
+  padding-top: 3%;
 }
 
 #terms{
   position: absolute;
-    bottom: 8px;
-    left: 16px;
-    font-size: 18px;
-
-}
-#LogoutButton{
-  padding-top: 10px;
+  bottom: 8px;
+  left: 16px;
+  font-size: 18px;
 }
 
-#test{
-  float: right;
+#separator{
+  height: 5px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #5cacf0;
 }
