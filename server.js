@@ -1,5 +1,5 @@
 const MongoClient = require('mongodb').MongoClient; //npm install mongodb@2.2.32
-const url = "mongodb://localhost:27017/profiles";
+const url = "mongodb://localhost:27017/review_data";
 const express = require('express'); //npm install express
 const session = require('express-session'); //npm install express-session
 const bodyParser = require('body-parser'); //npm install body-parser
@@ -32,6 +32,13 @@ MongoClient.connect(url, function(err, database) {
 app.get('/', function(req, res) {
   //if the user is not logged in redirect them to the login page
   if(!req.session.loggedin){res.redirect('/FoodHub-Login');return;}
+  res.render('pages/Foodhub')
+  db.collection('data').find({}).toArray(function(err, result) {
+    res.render('pages/Foodhub', {
+      users: result
+    });
+  }
+
 });
 //this is our login route, all it does is render the login.ejs page
 app.get('/FoodHub-Login', function(req, res) {
@@ -58,7 +65,7 @@ app.get('/addReview', function(req, res){
 });*/
 
 
-
+/*
 //the dologin route detasl with the data from the login screen.
 //the post variables, username and password ceom from the form on the login page.
 
@@ -77,4 +84,4 @@ app.post('/dologin', function(req, res) {
     //otherwise send them back to login
     else{res.redirect('/FoodHub-Login')}
   });
-});
+});*/
