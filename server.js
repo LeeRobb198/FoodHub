@@ -40,11 +40,13 @@ app.get('/FoodHub-Login', function(req, res) {
 
 app.get('/Foodhub', function(req, res) {
   res.render('pages/Foodhub');
- });
- app.get('/FoodHub-T&C', function(req, res) {
-   res.render('pages/FoodHub-T&C');
-  });
-
+});
+app.get('/FoodHub-T&C', function(req, res) {
+  res.render('pages/FoodHub-T&C');
+});
+app.get('/addReview', function(req, res){
+  res.render('pages/addReview');
+});
 
 
  // log out button
