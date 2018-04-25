@@ -55,12 +55,12 @@ app.get('/addReview', function(req, res){
 
 app.post('/review', function(req,res){
   var newReview = {
-    fullname = req.body.full_name,
-    date = req.body.date,
-    location = req.body.location,
-    restaurant = req.body.restaurant,
-    rating = req.body.rating,
-    review = req.body.review
+    fullname: req.body.full_name,
+    date: req.body.date,
+    location: req.body.location,
+    restaurant: req.body.restaurant,
+    rating: req.body.rating,
+    review: req.body.review
   }
   db.data.insert(newReview, function(err, result){
     if(err){
