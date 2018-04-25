@@ -59,6 +59,9 @@
 
   }
   #Register {
-    
+
+    background-color: white;
+  }
+  #LoginButton {
     background-color: white;
   }
