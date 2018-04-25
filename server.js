@@ -53,6 +53,22 @@ app.get('/addReview', function(req, res){
   res.render('pages/addReview');
 });
 
+app.post('/review', function(req,res){
+  var newReview = {
+    full_name = req.body.full_name,
+    date = req.body.date,
+    location = req.body.location,
+    restaurant = req.body.restaurant,
+    rating = req.body.rating,
+    review = req.body.review
+  }
+  db.data.insert(newReview, function(err, result){
+    if(err){
+      console.log(err);
+    }
+    res.redirect('/');
+  });
+});
 
  // log out button
 
