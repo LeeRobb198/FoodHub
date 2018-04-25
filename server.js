@@ -55,7 +55,7 @@ app.get('/addReview', function(req, res){
 
 app.post('/review', function(req,res){
   var newReview = {
-    full_name = req.body.full_name,
+    fullname = req.body.full_name,
     date = req.body.date,
     location = req.body.location,
     restaurant = req.body.restaurant,
