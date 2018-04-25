@@ -65,3 +65,7 @@
   #LoginButton {
     background-color: white;
   }
+
+  #loginRegisterButtons{
+    align-items: center;
+  }
