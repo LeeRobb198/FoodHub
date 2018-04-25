@@ -18,7 +18,6 @@ app.set('view engine', 'ejs');
 
 var db;
 
-
 //this is our connection to the mongo db, ts sets the variable db as our database
 MongoClient.connect(url, function(err, database) {
   if (err) throw err;
@@ -26,7 +25,6 @@ MongoClient.connect(url, function(err, database) {
   app.listen(8080);
   console.log('listening on 8080');
 });
-
 
 //this is our root route
 app.get('/', function(req, res) {
@@ -45,8 +43,6 @@ app.get('/Foodhub', function(req, res) {
    res.render('pages/FoodHub-T&C');
   });
 
-
-
  // log out button
 
 /*app.get('/logout', function(req, res) {
@@ -54,8 +50,6 @@ app.get('/Foodhub', function(req, res) {
   req.session.destroy();
   res.redirect('/FoodHub-Login.html');
 });*/
-
-
 
 //the dologin route detasl with the data from the login screen.
 //the post variables, username and password ceom from the form on the login page.

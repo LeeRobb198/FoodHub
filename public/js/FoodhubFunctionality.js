@@ -11,7 +11,7 @@ $(document).ready(function(){
     $('.sidebar')
       .sidebar('attach events', '.item');
 
-      $('#showReviews').click(function(){
+      $('#subButton').click(function(){
           $('#reviews').css({"display": "inline"});
       });
 
