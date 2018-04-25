@@ -1,4 +1,4 @@
-+
+
 
 const MongoClient = require('mongodb').MongoClient; //npm install mongodb@2.2.3
 const url = "mongodb://localhost:27017/profiles";
