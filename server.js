@@ -102,14 +102,14 @@ var datatostore = {
     res.redirect('/FoodHub-Login')
   })
 });
-
-app.get('/', function(req, res) {
-  //if the user is not logged in redirect them to the login page
-  if(!req.session.loggedin){res.redirect('/FoodHub-Login');return;}
-  //res.render('pages/Foodhub')
-  db.collection('data').find({}).toArray(function(err, result) {
-    res.render('pages/Foodhub', {
-      users: result
-    });
-  });
-});
+//
+// app.get('/', function(req, res) {
+//   //if the user is not logged in redirect them to the login page
+//   if(!req.session.loggedin){res.redirect('/FoodHub-Login');return;}
+//   //res.render('pages/Foodhub')
+//   db.collection('data').find({}).toArray(function(err, result) {
+//     res.render('pages/Foodhub', {
+//       users: result
+//     });
+//   });
+// });
