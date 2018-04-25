@@ -9,33 +9,32 @@
   </head>
 
   <body>
-
+    <div class="ui padded grid">
       <div id="header">
         <div id="mobileLogo">
             <img src= "Pictures/Logo.png" id="SiteLogo"/>
-
+          </a>
         </div>
       </div>
-      <div class="middle aligned stacked segment">
 
+  <div class="ui segment">
   <center>
-      <div class="ui stacked segment">
     <div id="LoginContent">
-    <form action="/dologin" method="POST">
-
+    <form class="ui form" action="/dologin" method="POST">
+      <div class="two wide field center aligned">
         <label id="login">Login</label>
         <div class="ui left icon input user icon">
           <input type="text" name="username" placeholder="username">
           <i class="user icon"></i>
-
+        </div>
       </div>
-
+      <div class="two wide field center aligned">
           <label id="login">Password</label>
             <div class="ui left icon input lock icon">
                 <input type="password" name="password" placeholder="password">
                     <i class="lock icon"></i>
-            </div>
-
+        </div>
+      </div>
           <!-- <div class="row"> -->
   <div class="ui grid centered" id="ButtonDisplaying">
     <div class="one grid">
@@ -55,10 +54,8 @@
 
                   Register
             </button>
-          </div>
     </div>
   </div>
-</div>
 </div>
 <!-- </div> -->
           <!-- <div id="userLoginPanel">
@@ -70,7 +67,7 @@
             <div id="buttonPosition"><button class="ui button" id="submitButton">Submit</button></div>
           </div> -->
         </center>
-
+      </div>
     </div>
     <script type="text/javascript" src="semantic/dist/semantic.min.css"></script>
     <script type="text/javascript" src="js/FoodhubFunctionality.js"></script>
