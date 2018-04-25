@@ -62,7 +62,7 @@ app.post('/review', function(req,res){
     rating: req.body.rating,
     review: req.body.review
   }
-  db.data.insert(newReview, function(err, result){
+  db.collection('data').insert(newReview, function(err, result){
     if(err){
       console.log(err);
     }
