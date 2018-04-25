@@ -1,6 +1,5 @@
-const MongoClient = require('mongodb').MongoClient;
+const MongoClient = require('mongodb').MongoClient; //npm install mongodb@2.2.32
 const url = "mongodb://localhost:27017/review_data";
-const path = require("path");
 const express = require('express'); //npm install express
 const session = require('express-session'); //npm install express-session
 const bodyParser = require('body-parser'); //npm install body-parser
@@ -8,7 +7,6 @@ const app = express();
 
 app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views');
-//app.use(bodyParser.urlencoded({extended:true}));
 //this tells express we are using sesssions. These are variables that only belong to one user of the site at a time.
 app.use(session({ secret: 'example' }));
 
@@ -29,16 +27,15 @@ MongoClient.connect(url, function(err, database) {
   console.log('listening on 8080');
 });
 
-
 //this is our root route
 app.get('/', function(req, res) {
   //if the user is not logged in redirect them to the login page
   //if(!req.session.loggedin){res.redirect('/FoodHub-Login');return;}
+  //res.render('pages/Foodhub')
   db.collection('data').find({}).toArray(function(err, result) {
-    console.log(result);
     res.render('pages/Foodhub', {
-        users: result
-      });
+      users: result
+    });
   });
 });
 
@@ -56,32 +53,33 @@ app.get('/addReview', function(req, res){
   res.render('pages/addReview');
 });
 
-//Test mongodb data
-app.get('/all', function(req, res) {
-    //Gathers review_data from mongodb, then outputs at JSON
-    db.collection('data').find({}).toArray(function(err, result) {
-	     if (err) throw err;
-        res.json(result);
-        });
-});
 
-/*
-app.get('/', function(req, res) {
-  //if the user is not logged in redirect them to the login page
-  //if(!req.session.loggedin){res.redirect('/FoodHub');return;}
-  res.render('pages/Foodhub')
+ // log out button
+
+/*app.get('/logout', function(req, res) {
+  req.session.loggedin = false;
+  req.session.destroy();
+  res.redirect('/FoodHub-Login.html');
+});*/
 
 
- db.collection('data').find({}).toArray(function(err, result) {
-     if (err) throw err;
-      res.render(json(result));
+
+//the dologin route deals with the data from the login screen.
+//the post variables, username and password ceom from the form on the login page.
+
+app.post('/dologin', function(req, res) {
+  console.log(JSON.stringify(req.body))
+  var uname = req.body.username;
+  var pword = req.body.password;
+
+
+  db.collection('profiles').findOne({"login.username":uname}, function(err, result) {
+    if (err) throw err;//if there is an error, throw the error
+    //if there is no result, redirect the user back to the login system as that username must not exist
+    if(!result){res.redirect('/FoodHub-Login');return}
+    //if there is a result then check the password, if the password is correct set session loggedin to true and send the user to the index
+    if(result.login.password == pword){ req.session.loggedin = true;  res.redirect('/FoodHub') }
+    //otherwise send them back to login
+    else{res.redirect('/FoodHub-Login')}
   });
-  /*
-      db.data.find(function(err, docs){
-        console.log("working");
-        res.render('pages/Foodhub',{
-
-        })
-*/
-
-//});
+});
