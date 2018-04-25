@@ -27,11 +27,10 @@ MongoClient.connect(url, function(err, database) {
   console.log('listening on 8080');
 });
 
-
 //this is our root route
 app.get('/', function(req, res) {
   //if the user is not logged in redirect them to the login page
-  //if(!req.session.loggedin){res.redirect('/FoodHub-Login');return;}
+  if(!req.session.loggedin){res.redirect('/FoodHub-Login');return;}
   //res.render('pages/Foodhub')
   db.collection('data').find({}).toArray(function(err, result) {
     res.render('pages/Foodhub', {
@@ -39,6 +38,7 @@ app.get('/', function(req, res) {
     });
   });
 });
+
 //this is our login route, all it does is render the login.ejs page
 app.get('/FoodHub-Login', function(req, res) {
   res.render('pages/FoodHub-Login');
@@ -63,7 +63,7 @@ app.get('/addReview', function(req, res){
 });*/
 
 
-/*
+
 //the dologin route detasl with the data from the login screen.
 //the post variables, username and password ceom from the form on the login page.
 
@@ -73,7 +73,7 @@ app.post('/dologin', function(req, res) {
   var pword = req.body.password;
 
 
-  db.collection('people').findOne({"login.username":uname}, function(err, result) {
+  db.collection('profiles').findOne({"login.username":uname}, function(err, result) {
     if (err) throw err;//if there is an error, throw the error
     //if there is no result, redirect the user back to the login system as that username must not exist
     if(!result){res.redirect('/FoodHub-Login');return}
@@ -82,4 +82,4 @@ app.post('/dologin', function(req, res) {
     //otherwise send them back to login
     else{res.redirect('/FoodHub-Login')}
   });
-});*/
+});
