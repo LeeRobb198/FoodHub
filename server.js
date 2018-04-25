@@ -53,6 +53,8 @@ app.get('/addReview', function(req, res){
   res.render('pages/addReview');
 });
 
+//Nearly working
+//When submitting the same data(e.g. name) again it will not show
 app.post('/review', function(req,res){
   var newReview = {
     fullname: req.body.full_name,
