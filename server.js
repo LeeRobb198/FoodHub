@@ -41,11 +41,11 @@ app.get('/', function(req, res) {
       });
   });
 });
+
 //this is our login route, all it does is render the login.ejs page
 app.get('/FoodHub-Login', function(req, res) {
   res.render('pages/FoodHub-Login');
 });
-
 app.get('/Foodhub', function(req, res) {
   res.render('pages/Foodhub');
 });

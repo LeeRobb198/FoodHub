@@ -1,3 +1,4 @@
+
 function initAutocomplete() {
   // Create the autocomplete object, restricting the search to geographical
   // location types.
@@ -62,4 +63,4 @@ function initAutocomplete() {
   function fillInAddress() {
     // Get the place details from the autocomplete object.
     var place = autocomplete.getPlace();
-  }
+}
