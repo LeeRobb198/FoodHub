@@ -23,13 +23,21 @@
             <form class="ui form" action="/FoodHub-Register" method="POST">
               <div class="two wide field center aligned">
               <label>Username</label>
-              <input type="text" name="username" placeholder="username">
+              <div class="ui left icon input user icon">
+                <input type="text" name="username" placeholder="username">
+                <i class="user icon"></i>
+              </div>
               </div>
               <div class="two wide field center aligned">
-              <label>Password</label>
-              <input type="password" name="password" placeholder="password">
+                <label id="login">Password</label>
+                  <div class="ui left icon input lock icon">
+                      <input type="password" name="password" placeholder="password">
+                          <i class="lock icon"></i>
               </div>
-              <button class="ui button" type="submit">Register</button>
+              </div>
+              <button class="ui button" type="submit">Register
+                <i class="address card icon"></i>
+              </button>
             </form>
 
       <!-- <form class="action">
