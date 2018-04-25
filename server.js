@@ -1,4 +1,4 @@
-
++
 
 const MongoClient = require('mongodb').MongoClient; //npm install mongodb@2.2.3
 const url = "mongodb://localhost:27017/profiles";
@@ -101,4 +101,15 @@ var datatostore = {
     //when complete redirect to the index
     res.redirect('/FoodHub-Login')
   })
+});
+
+app.get('/', function(req, res) {
+  //if the user is not logged in redirect them to the login page
+  if(!req.session.loggedin){res.redirect('/FoodHub-Login');return;}
+  //res.render('pages/Foodhub')
+  db.collection('data').find({}).toArray(function(err, result) {
+    res.render('pages/Foodhub', {
+      users: result
+    });
+  });
 });
