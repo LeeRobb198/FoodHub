@@ -4,6 +4,7 @@ const express = require('express'); //npm install express
 const session = require('express-session'); //npm install express-session
 const bodyParser = require('body-parser'); //npm install body-parser
 const app = express();
+
 app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views');
 //this tells express we are using sesssions. These are variables that only belong to one user of the site at a time.
@@ -18,7 +19,6 @@ app.set('view engine', 'ejs');
 
 var db;
 
-
 //this is our connection to the mongo db, ts sets the variable db as our database
 MongoClient.connect(url, function(err, database) {
   if (err) throw err;
@@ -31,20 +31,18 @@ MongoClient.connect(url, function(err, database) {
 //this is our root route
 app.get('/', function(req, res) {
   //if the user is not logged in redirect them to the login page
-  if(!req.session.loggedin){res.redirect('/FoodHub-Login');return;}
+  //if(!req.session.loggedin){res.redirect('/FoodHub-Login');return;}
   //res.render('pages/Foodhub')
   db.collection('data').find({}).toArray(function(err, result) {
     res.render('pages/Foodhub', {
       users: result
     });
-  }
-
+  });
 });
 //this is our login route, all it does is render the login.ejs page
 app.get('/FoodHub-Login', function(req, res) {
   res.render('pages/FoodHub-Login');
 });
-
 app.get('/Foodhub', function(req, res) {
   res.render('pages/Foodhub');
 });
