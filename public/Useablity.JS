@@ -1,4 +1,4 @@
-// 
-// function ColourBlind() {
-//     document.body.style.backgroundColor = "red";
-// }
+
+function ColourBlind() {
+    document.body.style.backgroundColor = "red";
+}
