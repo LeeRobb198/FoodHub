@@ -1,69 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>FoodHub-Login</title>
-      <link rel="stylesheet" href="semantic/dist/semantic.min.css">
-      <link rel="stylesheet" href="css/FoodHub.css">
-	    <link rel="stylesheet" href="css/FoodHub-Login.css">
-  </head>
 
-  <body>
-    <div class="ui padded grid">
-      <div id="header">
-        <div id="mobileLogo">
-            <img src= "Pictures/Logo.png" id="SiteLogo"/>
-          </a>
-        </div>
-      </div>
+<head>
+  <meta charset="utf-8">
+  <title>FoodHub-Login</title>
+  <link rel="stylesheet" href="semantic/dist/semantic.min.css">
+  <link rel="stylesheet" href="css/FoodHub.css">
+  <link rel="stylesheet" href="css/FoodHub-Login.css">
+</head>
 
-  <div id="userLoginContent">
-  <center>
-    <div id="LoginContent">
-    <form class="ui form" action="/dologin" method="POST">
-      <div class="two wide field center aligned">
-        <label id="login">Login</label>
-        <div class="ui left icon input user icon">
-          <input type="text" name="username" placeholder="username">
-          <i class="user icon"></i>
-        </div>
+<body>
+  <div class="ui padded grid">
+    <div id="header">
+      <div id="mobileLogo">
+        <img src="Pictures/Logo.png" id="SiteLogo" />
+        </a>
       </div>
-      <div class="two wide field center aligned">
-          <label id="login">Password</label>
-            <div class="ui left icon input lock icon">
+    </div>
+
+    <div id="userLoginContent">
+      <center>
+        <div id="LoginContent">
+          <form class="ui form" action="/dologin" method="POST">
+            <div class="two wide field center aligned">
+              <label id="login">Login</label>
+              <div class="ui left icon input user icon">
+                <input type="text" name="username" placeholder="username">
+                <i class="user icon"></i>
+              </div>
+            </div>
+            <div class="two wide field center aligned">
+              <label id="login">Password</label>
+              <div class="ui left icon input lock icon">
                 <input type="password" name="password" placeholder="password">
-                    <i class="lock icon"></i>
-        </div>
-      </div>
-          <!-- <div class="row"> -->
-  <div class="ui grid centered" id="ButtonDisplaying">
-    <div class="one grid">
-      <button class="ui button" type="submit" id="LoginButton">
+                <i class="lock icon"></i>
+              </div>
+            </div>
+
+            <div class="ui grid centered" id="ButtonDisplaying">
+              <div class="one grid">
+                <button class="ui button" type="submit" id="LoginButton">
                   <i class="sign in alternate icon">  </i>
                       Log in</button>
-    </div>
-    <button class="ui button" id="Registe">
+              </div>
+              <button class="ui button" id="Registe">
         <a href="FoodHub-Register">
             <i class="address card icon"></i>
 
                 Register
           </button>
-    </form>
+          </form>
 
 
 
 
 
 
-  </div>
-</div>
+          </div>
+        </div>
 
       </center>
     </div>
   </div>
-    <script type="text/javascript" src="semantic/dist/semantic.min.css"></script>
-    <script type="text/javascript" src="js/FoodhubFunctionality.js"></script>
-    <script src="\js\konami.js"></script>
-  </body>
+  <script type="text/javascript" src="semantic/dist/semantic.min.css"></script>
+  <script type="text/javascript" src="js/FoodhubFunctionality.js"></script>
+  <script src="\js\konami.js"></script>
+</body>
 
 </html>
