@@ -98,11 +98,11 @@ app.get('/logout', function(req, res) {
   res.redirect('/FoodHub-Login');
 });
 
-app.get('/pages/FoodHub',function(req,res) {
-  console.log("req.body");
-  res.render('review', {reviews:req.body}
-  );
-});
+// app.get('/pages/FoodHub',function(req,res) {
+//   console.log("req.body");
+//   res.render('review', {reviews:req.body}
+//   );
+// });
 
 //the dologin route detasl with the data from the login screen.
 //the post variables, username and password ceom from the form on the login page.
