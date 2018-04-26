@@ -30,9 +30,9 @@ MongoClient.connect(url, function(err, database) {
 //this is our root route
 app.get('/', function(req, res) {
   //if the user is not logged in redirect them to the login page
-  //if(!req.session.loggedin){res.redirect('/FoodHub-Login');return;}
+  if(!req.session.loggedin){res.redirect('/FoodHub-Login');return;}
 
-  db.collection('data').find({}).toArray(function(err, result) {
+  db.collection('reviews').find({}).toArray(function(err, result) {
     res.render('pages/Foodhub', {
       users: result
     });
@@ -71,7 +71,7 @@ app.get('/Foodhub', function(req, res) {
        rating: req.body.rating,
        review: req.body.review
      }
-     db.collection('data').insert(newReview, function(err, result){
+     db.collection('reviews').insert(newReview, function(err, result){
        if(err){
          console.log(err);
        }
