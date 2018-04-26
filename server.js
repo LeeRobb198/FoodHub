@@ -56,7 +56,7 @@ app.get('/FoodHub-Login', function(req, res) {
 //Render FoodHub and check if logged in
 app.get('/Foodhub', function(req, res) {
     if(!req.session.loggedin){res.redirect('/FoodHub-login');return;}
-  res.render('pages/Foodhub');
+  res.redirect('/');
  });
  //Render FoodHub-T&C and check if logged in
  app.get('/FoodHub-T&C', function(req, res) {
