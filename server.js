@@ -100,7 +100,7 @@ app.get('/logout', function(req, res) {
 
 app.get('/pages/FoodHub',function(req,res) {
   console.log("req.body");
-//  res.render('review', {reviews:req.body}
+  res.render('review', {reviews:req.body}
   );
 });
 
