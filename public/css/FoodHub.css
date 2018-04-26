@@ -114,7 +114,11 @@ header, section,  nav, footer {
     display: none;
 
   }
+  @media only screen and (max-width: 1200px){
+    #terms {
+      display: none;
 
+    }
 #sidebarUI{
 padding-top: 3%;
 }
