@@ -33,6 +33,8 @@ app.get('/', function(req, res) {
   if(!req.session.loggedin){res.redirect('/FoodHub-Login');return;}
 
   db.collection('reviews').find({}).toArray(function(err, result) {
+        if (err) throw err;
+    // the result of the query is sent to the users page as the "users" array
     res.render('pages/Foodhub', {
       users: result
     });
