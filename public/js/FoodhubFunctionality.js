@@ -12,7 +12,7 @@ $(document).ready(function(){
       .sidebar('attach events', '.item');
 
 
-      $('#showReviews').click(function(){
+      $('#subButton').click(function(){
           $('#reviews').css({"display": "inline"});
       });
 });
