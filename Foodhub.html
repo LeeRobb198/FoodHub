@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>FoodHub</title>
+      <link rel="stylesheet" href="range.css">
+      <link rel="stylesheet" href="semantic/dist/semantic.min.css">
+	     <link rel="stylesheet" href="FoodHub.css">
+
+       <!-- Script for AutoComplete -->
+       <script script type="text/javascript" src="AutoComplete.js"></script>
+
+  </head>
+
+  <body>
+
+    <div id=sidebarUI class="ui fixed borderless secondary  menu">
+        <a class="active item">
+        <i class="align justify icon"></i>
+
+        </a>
+    </div>
+
+
+
+    <div id="sidebar" class="ui sidebar top mobile only">
+      <div class="ui segment">
+      <div class="ui form" action="SelectMenu" method="get">
+        <center><h1>Location</h1></center>
+          <div id="filterOption">
+            <label for="Location" id="titleFilterOptions">Your Location</label>
+            <input type="text" id="mobileLocation" name="Location" placeholder="Location">
+          </div>
+          <label for="lname">Distance</label>
+          <div class="ui segment">
+            <div class="ui labeled range" id="range-0"></div>
+          </div>
+
+          <center><div id="separator"></div></center>
+
+          <div class="ui segment">
+            <center><h1>Filters</h1></center>
+            <h5>Cuisine</h5>
+              <select class="ui dropdown">
+                <option value="0">Any</option>
+                <option value="1">Japanese</option>
+                <option value="2">American</option>
+                <option value="3">Chinese</option>
+                <option value="4">Thai</option>
+                <option value="5">Greek</option>
+                <option value="6">Indian</option>
+                <option value="7">Italian</option>
+                <option value="8">Mexican</option>
+              </select>
+
+            <div class="ui form" id="price-range">
+              <h5>Price Range</h5>
+              <div class="inline fields">
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="frequency" checked="checked">
+                    <label>Low</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="frequency">
+                    <label>Medium</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="frequency">
+                    <label>High</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h5>Star Rating</h5>
+            <div class="ui massive star rating" data-max-rating="5"></div>
+            <div id="submitButton">
+            <button class="ui blue button">Submit</button>
+          </div>
+          </div>
+      </div>
+      </div>
+    </div>
+
+    <!-- Start of header content ------------------------------------------------------------->
+
+    <div class="pusher">
+    <div class="ui padded grid">
+      <div id="header">
+        <!-- Logo -->
+        <div id="logo">
+            <img src= "Logo.png" id="SiteLogo"/>
+        </div>
+        <!-- User Icon -->
+        <div class="right floated left aligned six wide column" id=LogoutButton>
+  <button class="ui active button">
+    <a href="/Logout">
+    <i class="sign out alternate icon"></i>
+        Sign Out
+  </button>
+  <!-- User Icon -->
+
+
+  <div id="userIcon">
+
+
+    </a>
+  </div>
+
+</div>
+      </div>
+
+      <!-- End of header content ------------------------------------------------------------->
+
+      <div id="sidebar" class="four wide computer column computer only">
+        <div class="ui segment">
+          <div class="ui form" action="SelectMenu" method="get">
+            <center><h1>Location</h1></center>
+              <div id="filterOption">
+                <label for="Location" id="titleFilterOptions">Your Location</label>
+                <input type="text" id="mainLocation" name="Location" placeholder="Location">
+              </div>
+
+              <label for="lname">Distance</label>
+              <div class="ui segment">
+                <div class="slidecontainer">
+                  <input type="range" min="1" max="8047" value="50" id="distanceOption" class="slider">
+                </div>
+
+                <!-- <div class="ui labeled range">
+                  <input type="range" min="1" max="8047" value="50" id="distanceOption">
+                </div> -->
+              </div>
+
+              <center><div id="separator"></div></center>
+
+              <div class="ui segment">
+                <center><h1>Filters</h1></center>
+                <h5>Cuisine</h5>
+                  <select class="ui dropdown" id="cuisineOption">
+                    <option value="0">Any</option>
+                    <option value="1">Japanese</option>
+                    <option value="2">American</option>
+                    <option value="3">Chinese</option>
+                    <option value="4">Thai</option>
+                    <option value="5">Greek</option>
+                    <option value="6">Indian</option>
+                    <option value="7">Italian</option>
+                    <option value="8">Mexican</option>
+                  </select>
+
+                <div class="ui form" id="price-range">
+                  <h5>Price Range</h5>
+                  <div class="inline fields">
+                    <div class="field">
+                      <div class="ui radio checkbox">
+                        <input type="radio" name="priceOption" checked="checked" value="1">
+                        <label>Low</label>
+                      </div>
+                    </div>
+                    <div class="field">
+                      <div class="ui radio checkbox">
+                        <input type="radio" name="priceOption" value="2">
+                        <label>Medium</label>
+                      </div>
+                    </div>
+                    <div class="field">
+                      <div class="ui radio checkbox">
+                        <input type="radio" name="priceOption" value="3">
+                        <label>High</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <h5> Star rating </h5>
+                <div class="ui massive star rating" data-max-rating="5" data-id="ratingOption"></div>
+              </div>
+
+              <div id="submitButton">
+              <button class="ui blue button" id="subButton">Submit</button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Button used to show reviews for now as api has not been fully implemented -->
+        <button id="showReviews">Show Reviews</button>
+      </div>
+
+
+      <!-- End of sidebar content ------------------------------------------------------------->
+
+
+      <!-- Start of main content (Map and Reviews) -------------------------------------------->
+
+      <div id="content" class="twelve wide computer sixteen wide mobile column">
+
+        <div id="map">
+
+        </div>
+        <div id="reviews">
+          <table id="reviewsTable">
+            <thead>
+            <tr>
+              <th>Reviews</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td> This is where the reviews will pop up when you select a restaurant </p>
+              </td>
+            </tr>
+            <tr>
+              <td> Item 2.</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+
+        </div>
+
+
+      </div>
+      <!-- End of main content (Map and Reviews) ---------------------------------------------->
+      <div id="footer">
+        <a href="FoodHub-T&C.html" id="terms">Terms</a>
+      </div>
+    </div>
+
+
+    <script src="js/konami.js"></script>
+    <script type="text/javascript" src="http://helium-brave.8080.codio.io/Coursework/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="range.js"></script>
+    <script type="text/javascript" src="GoogleMap.js"></script>
+    <script type="text/javascript" src="semantic/dist/semantic.min.js"></script>
+    <script type="text/javascript" src="http://helium-brave.8080.codio.io/Coursework/FoodhubFunctionality.js"></script>
+
+    <!-- Script for Google AutoComplete and Map issue with separate scripts for api so combined however not doing the autocomplete -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKmr5cGY2-bu4wHPpMSxsvrpH5XM6-Cps&libraries=places&callback=callFunctions" async defer></script>
+
+  </body>
+</html>
