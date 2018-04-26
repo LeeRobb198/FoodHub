@@ -31,15 +31,16 @@ MongoClient.connect(url, function(err, database) {
 app.get('/', function(req, res) {
   //if the user is not logged in redirect them to the login page
   if(!req.session.loggedin){res.redirect('/FoodHub-Login');return;}
-
-  db.collection('reviews').find({}).toArray(function(err, result) {
-        if (err) throw err;
-    // the result of the query is sent to the users page as the "users" array
-    //var review = req.review
-    res.render('pages/Foodhub', {
-      review: result
-    });
-  });
+res.render('pages/Foodhub', {
+  // db.collection('reviews').find({}).toArray(function(err, result) {
+  //       if (err) throw err;
+  //   // the result of the query is sent to the users page as the "users" array
+  //   //var review = req.review
+  //   res.render('pages/Foodhub', {
+  //     review: result
+  //   });
+  // });
+});
 });
 
 
@@ -69,7 +70,7 @@ app.get('/Foodhub', function(req, res) {
    app.get('/addReview', function(req, res) {
      res.render('pages/addReview');
     });
-
+/*
    app.post('/review', function(req,res){
      var newReview = {
        name: req.body.full_name,
@@ -86,7 +87,7 @@ app.get('/Foodhub', function(req, res) {
        res.redirect('/FoodHub');
      });
    });
-
+*/
 
 
 
@@ -100,7 +101,7 @@ app.get('/logout', function(req, res) {
 
 app.get('/pages/FoodHub',function(req,res) {
   console.log("req.body");
-  res.render('review', {reviews:req.body}
+//  res.render('review', {reviews:req.body}
   );
 });
 
