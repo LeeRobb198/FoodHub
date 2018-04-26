@@ -114,11 +114,7 @@ header, section,  nav, footer {
     display: none;
 
   }
-@media only screen and (min-width: 1200px){
-  #footer{
-    display: none;
-  }
-}
+
 #sidebarUI{
 padding-top: 3%;
 }
