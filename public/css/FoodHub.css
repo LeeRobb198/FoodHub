@@ -131,10 +131,11 @@ padding-top: 3%;
     font-size: 18px;
 
 }
+  @media only screen and (max-width: 1200px){
 #LogoutButton{
  padding-top:3%;
+  }
 }
-
 #test{
   float: right;
 }
