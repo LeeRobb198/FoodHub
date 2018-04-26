@@ -36,7 +36,7 @@ app.get('/', function(req, res) {
         if (err) throw err;
     // the result of the query is sent to the users page as the "users" array
     res.render('pages/Foodhub', {
-      users: result
+      user: result
     });
   });
 });
