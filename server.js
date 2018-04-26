@@ -57,9 +57,9 @@ app.get('/addReview', function(req, res){
 //When submitting the same data(e.g. name) again it will not show
 app.post('/review', function(req,res){
   var newReview = {
-    fullname: req.body.full_name,
+    name: req.body.full_name,
     date: req.body.date,
-    location: req.body.location,
+    city: req.body.location,
     restaurant: req.body.restaurant,
     rating: req.body.rating,
     review: req.body.review
