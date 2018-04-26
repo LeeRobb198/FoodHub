@@ -15,4 +15,7 @@ $(document).ready(function(){
       $('#subButton').click(function(){
           $('#reviews').css({"display": "inline"});
       });
+      $('#submitButton').click(function(){
+          $('#reviews').css({"display": "inline"});
+      });
 });
