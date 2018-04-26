@@ -115,7 +115,7 @@ header, section,  nav, footer {
 
   }
   @media only screen and (max-width: 1200px){
-    #terms {
+    #footer {
       display: none;
 
     }
