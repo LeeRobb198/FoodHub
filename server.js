@@ -35,7 +35,7 @@ app.get('/', function(req, res) {
   db.collection('reviews').find({}).toArray(function(err, result) {
         if (err) throw err;
     // the result of the query is sent to the users page as the "users" array
-    //var review = req.users
+    //var review = req.review
     res.render('pages/Foodhub', {
       review: result
     });
@@ -100,7 +100,7 @@ app.get('/logout', function(req, res) {
 
 app.get('/pages/FoodHub',function(req,res) {
   console.log("req.body");
-  res.render('users', {reviews:req.body}
+  res.render('review', {reviews:req.body}
   );
 });
 
