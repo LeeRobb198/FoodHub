@@ -135,7 +135,7 @@ padding-top: 3%;
 #LogoutButton{
 
 
-margin-top: 20px;
+margin-top: 20px !important;
 }
 #test{
   float: right;
