@@ -41,6 +41,28 @@ app.get('/', function(req, res) {
   });
 });
 
+
+app.get('/FoodHub', function(req, res) {
+  if(!req.session.loggedin){res.redirect('/login');return;}
+  //get the requested user based on their username, eg /profile?username=dioreticllama
+  var uname = req.query.username;
+  //this query finds the first document in the array with that username.
+  //Because the username value sits in the login section of the user data we use login.username
+  db.collection('reviews').findOne({
+    "login.username": uname
+  }, function(err, result) {
+    if (err) throw err;
+    //console.log(uname+ ":" + result);
+    //finally we just send the result to the user page as "user"
+    res.render('pages/FoodHub', {
+      user: result
+    })
+  });
+
+});
+
+
+
 //this is our login route, all it does is render the login.ejs page
 app.get('/FoodHub-Login', function(req, res) {
   res.render('pages/FoodHub-Login');
