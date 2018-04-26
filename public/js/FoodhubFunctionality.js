@@ -10,12 +10,15 @@ $(document).ready(function(){
 
     $('.sidebar')
       .sidebar('attach events', '.item');
-
+      
+      $('#subButtonMobile').click(function(){
+          $('#reviews').css({"display": "inline"});
+      });
 
       $('#subButton').click(function(){
           $('#reviews').css({"display": "inline"});
       });
-      $('#submitButton').click(function(){
-          $('#reviews').css({"display": "inline"});
-      });
+
+
+
 });
