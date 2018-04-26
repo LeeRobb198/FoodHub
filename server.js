@@ -57,6 +57,7 @@ app.get('/Foodhub', function(req, res) {
   app.get('/FoodHub-Register', function(req, res) {
     res.render('pages/FoodHub-Register');
    });
+    //Render FoodHub=addReview
    app.get('/addReview', function(req, res) {
      res.render('pages/addReview');
     });
@@ -74,7 +75,7 @@ app.get('/Foodhub', function(req, res) {
        if(err){
          console.log(err);
        }
-       res.redirect('/');
+       res.redirect('/FoodHub');
      });
    });
 
