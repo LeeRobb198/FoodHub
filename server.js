@@ -31,7 +31,7 @@ MongoClient.connect(url, function(err, database) {
 app.get('/', function(req, res) {
   //if the user is not logged in redirect them to the login page
   if(!req.session.loggedin){res.redirect('/FoodHub-Login');return;}
-res.render('pages/Foodhub');
+
   // db.collection('reviews').find({}).toArray(function(err, result) {
   //       if (err) throw err;
   //   // the result of the query is sent to the users page as the "users" array
