@@ -34,8 +34,10 @@ app.get('/', function(req, res) {
 
   db.collection('reviews').find({}).toArray(function(err, result) {
         if (err) throw err;
+        console.log(result);
     // the result of the query is sent to the users page as the "users" array
     //var review = req.review
+    
     res.render('pages/Foodhub', {
       review: result
     });
