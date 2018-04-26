@@ -5,9 +5,8 @@ const express = require('express'); //npm install express
 const session = require('express-session'); //npm install express-session
 const bodyParser = require('body-parser'); //npm install body-parser
 const app = express();
-app.use(express.static(__dirname + '/public'));
-app.set('views', __dirname + '/views');
-//this tells express we are using sesssions. These are variables that only belong to one user of the site at a time.
+app.use(express.static(__dirname + '/public')); // Get the public folder
+app.set('views', __dirname + '/views'); // get the pages
 app.use(session({ secret: 'example' }));
 
 app.use(bodyParser.urlencoded({
@@ -29,7 +28,7 @@ MongoClient.connect(url, function(err, database) {
 });
 
 
-//this is our root route
+//root route
 app.get('/', function(req, res) {
   //if the user is not logged in redirect them to the login page
   if(!req.session.loggedin){res.redirect('/FoodHub-Login');return;}
@@ -38,15 +37,17 @@ app.get('/', function(req, res) {
 app.get('/FoodHub-Login', function(req, res) {
   res.render('pages/FoodHub-Login');
 });
-
+//Render FoodHub and check if logged in
 app.get('/Foodhub', function(req, res) {
     if(!req.session.loggedin){res.redirect('/FoodHub-login');return;}
   res.render('pages/Foodhub');
  });
+ //Render FoodHub-T&C and check if logged in
  app.get('/FoodHub-T&C', function(req, res) {
      if(!req.session.loggedin){res.redirect('/FoodHub-login');return;}
    res.render('pages/FoodHub-T&C');
   });
+   //Render FoodHub-Register
   app.get('/FoodHub-Register', function(req, res) {
     res.render('pages/FoodHub-Register');
    });
@@ -83,7 +84,7 @@ app.post('/dologin', function(req, res) {
   });
 });
 
-
+//Register and storing username and password to database
 app.post('/FoodHub-Register', function(req, res) {
 
 var datatostore = {
@@ -93,7 +94,7 @@ var datatostore = {
 
 
 
-//once created we just run the data string against the database and all our new data will be saved/
+//once registered redirect to FoodHub-Login
   db.collection('people').save(datatostore, function(err, result) {
     if (err) throw err;
     console.log('saved to database')
@@ -101,14 +102,3 @@ var datatostore = {
     res.redirect('/FoodHub-Login')
   })
 });
-//
-// app.get('/', function(req, res) {
-//   //if the user is not logged in redirect them to the login page
-//   if(!req.session.loggedin){res.redirect('/FoodHub-Login');return;}
-//   //res.render('pages/Foodhub')
-//   db.collection('data').find({}).toArray(function(err, result) {
-//     res.render('pages/Foodhub', {
-//       users: result
-//     });
-//   });
-// });
