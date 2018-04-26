@@ -4,70 +4,78 @@
     <meta charset="utf-8">
 
     <title>FoodHub</title>
-    <link rel="stylesheet" href="semantic/dist/semantic.min.css">
-      <!--<link rel="stylesheet" href="FoodHub.css"> -->
-    <link rel="stylesheet" href="css/AddReview.css">
-       <script type="text/javascript" src="semantic/dist/semantic.min.js"></script>
-       <script type="text/javascript" src="js/FoodHubFunctionality.js"></script>
-     </head>
+      <!-- CSS Scripts -->
+      <link rel="stylesheet" href="semantic/dist/semantic.min.css">
+      <link rel="stylesheet" href="css/AddReview.css">
+
+      <!-- JS Scripts -->
+      <script type="text/javascript" src="semantic/dist/semantic.min.js"></script>
+      <script type="text/javascript" src="js/FoodHubFunctionality.js"></script>
+  </head>
 
   <body>
     <div id="header">
-        <div id="logo">
-          <a href="Foodhub">
-          <img src= "Logo.png" id="SiteLogo"/>
+      <div id="logo">
+        <a href="Foodhub">
+          <img src= "Pictures/Logo.png" id="SiteLogo"/>
         </a>
-        </div>
+      </div>
 
-        <div id="userIcon">
-          <a href="FoodHub-Login">
-          <img src= "user-icon.png" id="iconProperties"/>
-        </a>
+      <div class="right floated left aligned six wide column" id=LogoutButton>
+        <button class="ui active button">
+          <a href="/Logout">
+            <i class="sign out alternate icon"></i>
+            Sign Out
+          </button>
+            <!-- User Icon Possible Delete-->
+            <div id="userIcon">
+          </a>
         </div>
+      </div>
     </div>
 
-<section id="addSection">
-         <h1>Write a Review:</h1>
-<div class="ui grid">
-  <div class="ui one column stackable center aligned page grid">
-   <div class="column twelve wide">
-       <form action="/review"method="POST">
-         <div class="ui huge form">
-           <div class="field">
-               <label>Full Name</label>
-               <input placeholder="Full Name" type="text" name ="full_name">
-             </div>
-           <div class ="two fields">
-             <div class="field">
-               <label>Date</label>
-               <input placeholder="Date" type="text" name ="date">
-             </div>
-           <div class ="field">
-             <label>City or Area</label>
-             <input placeholder="Location" type="text" name ="location">
-           </div>
-         </div>
-         <div class ="two fields">
-           <div class ="field">
-             <label>Restaurant</label>
-             <input placeholder="Restaurant" type="text" name ="restaurant">
-           </div>
-           <div class ="field">
-             <label>Rating(From 0 to 5)</label>
-             <input placeholder="Rating" type="text" name = "rating">
-           </div>
-         </div>
-         <h2>Review</h2>
-         <div class="field">
-           <textarea rows="2" type="text" name ="review"></textarea>
-         </div>
+    <section id="addSection">
+      <h1>Write a Review:</h1>
+      <div class="ui grid">
+        <div class="ui one column stackable center aligned page grid">
+          <div class="column twelve wide">
+            <form action="/review"method="POST">
+              <div class="ui huge form">
+                <div class="field">
+                  <label>Full Name</label>
+                  <input placeholder="Full Name" type="text" name ="full_name">
+                </div>
+                <div class ="two fields">
+                  <div class="field">
+                    <label>Date</label>
+                    <input placeholder="Date" type="text" name ="date">
+                  </div>
+                  <div class ="field">
+                    <label>City or Area</label>
+                    <input placeholder="Location" type="text" name ="location">
+                  </div>
+                </div>
+                <div class ="two fields">
+                  <div class ="field">
+                    <label>Restaurant</label>
+                    <input placeholder="Restaurant" type="text" name ="restaurant">
+                  </div>
+                  <div class ="field">
+                    <label>Rating(From 0 to 5)</label>
+                    <input placeholder="Rating" type="text" name = "rating">
+                  </div>
+                </div>
+                <h2>Review</h2>
+                <div class="field">
+                  <textarea rows="2" type="text" name ="review"></textarea>
+                </div>
 
-         <div id="buttonPosition"><button class="ui big inverted blue button" id="addButton">Submit</button></div>
-       </form>
-   </div>
-  </div>
-</div>
-</section>
+                <div id="buttonPosition"><button class="ui big inverted blue button" id="addButton">Submit</button></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
 
-</body>
+    </body>
 </html>
