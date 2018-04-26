@@ -30,7 +30,7 @@ MongoClient.connect(url, function(err, database) {
 //this is our root route
 app.get('/', function(req, res) {
   //if the user is not logged in redirect them to the login page
-  if(!req.session.loggedin){res.redirect('/FoodHub-Login');return;}
+  //if(!req.session.loggedin){res.redirect('/FoodHub-Login');return;}
 
   db.collection('data').find({}).toArray(function(err, result) {
     res.render('pages/Foodhub', {
