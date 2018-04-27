@@ -129,7 +129,7 @@ header, section,  nav, footer {
     font-size: 18px;
 
 }
-@media only screen and (max-width: 1500px){
+@media only screen and (max-width: 1100px){
 #LogoutButton, #ReviewButton{
 
 display: none;
