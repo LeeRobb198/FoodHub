@@ -137,6 +137,12 @@ padding-top: 3%;
 display: none;
 }
 }
+@media only screen and (max-width: 1200px){
+#ReviewButton{
+
+display: none;
+}
+}
 #test{
   float: right;
 }
