@@ -131,18 +131,13 @@ padding-top: 3%;
     font-size: 18px;
 
 }
-@media only screen and (min-width: 1200px){
-#LogoutButton{
+@media only screen and (max-width: 1800px-){
+#LogoutButton, #ReviewButton{
 
 display: none;
+  }
 }
-}
-@media only screen and (min-width: 1200px){
-#ReviewButton{
 
-display: none;
-}
-}
 #test{
   float: right;
 }
