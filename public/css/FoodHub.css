@@ -131,11 +131,11 @@ padding-top: 3%;
     font-size: 18px;
 
 }
-
+@media only screen and (max-width: 1200px){
 #LogoutButton{
 
-
-margin-top: 20px !important;
+display: none;
+}
 }
 #test{
   float: right;
@@ -143,8 +143,4 @@ margin-top: 20px !important;
 #Registe {
 
   background-color: white;
-}
-#Buttons{
- margin-top: 20px;
-
 }
