@@ -131,7 +131,7 @@ padding-top: 3%;
     font-size: 18px;
 
 }
-@media only screen and (max-width: 1800px-){
+@media only screen and (max-width: 1800px){
 #LogoutButton, #ReviewButton{
 
 display: none;
