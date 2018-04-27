@@ -109,7 +109,7 @@ header, section,  nav, footer {
   width: 100px;
 }
 
-@media only screen and (min-width: 1200px){
+@media only screen and (min-width: 1100px){
   #sidebarUI {
     display: none;
 
@@ -131,10 +131,12 @@ padding-top: 3%;
     font-size: 18px;
 
 }
-#LogoutButton{
-  padding-top: 10px;
-}
 
+#LogoutButton{
+
+
+margin-top: 20px !important;
+}
 #test{
   float: right;
 }
