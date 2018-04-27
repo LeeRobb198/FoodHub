@@ -3,7 +3,7 @@ const MongoClient = require('mongodb').MongoClient; //npm install mongodb@2.2.3
 const url = "mongodb://localhost:27017/profiles";
 const express = require('express'); //npm install express
 const session = require('express-session'); //npm install express-session
-const bodyParser = require('body-parser'); //np
+const bodyParser = require('body-parser'); //npm install body-parser
 const app = express();
 app.use(express.static(__dirname + '/public')); // Get the public folder
 app.set('views', __dirname + '/views'); // get the pages
@@ -37,7 +37,7 @@ app.get('/', function(req, res) {
         console.log(result);
     // the result of the query is sent to the users page as the "users" array
     //var review = req.review
-    
+
     res.render('pages/Foodhub', {
       review: result
     });
